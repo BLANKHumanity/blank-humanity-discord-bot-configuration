@@ -18,5 +18,5 @@ jobs:
         root: src/main/resources
         schemaMapping: |
           {
-            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/main/src/main/resources/config-schema.json": [ "application.yml" ]
+            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/main/blankdiscordbot-core/src/main/resources/config-schema.json": [ "application.yml" ]
           }
