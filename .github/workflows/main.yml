@@ -15,7 +15,6 @@ jobs:
     - uses: actions/checkout@v2
     - uses: InoUno/yaml-ls-check@v1.1.0
       with:
-        root: src/main/resources
         schemaMapping: |
           {
             "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/main/blankdiscordbot-core/src/main/resources/config-schema.json": [ "application.yml" ]
