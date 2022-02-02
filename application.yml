@@ -53,10 +53,12 @@ discord:
       description: "Create coins from the void and give them to someone"
       options:
         user: "The coin receiving user"
-        amount: "Amount of coins to give"
+        amount: "Amount of coins to give. Use negative number to remove coins."
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456
+        - 881731045744082964
+        - 927843505202679878
     gift:
       description: "Gifts an item from the void to a user"
       options:
