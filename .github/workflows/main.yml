@@ -31,5 +31,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         local-dir: ./
         server-dir: /BlankDiscordBot/config/
+        git-ftp-args: --insecure
 
 
