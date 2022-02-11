@@ -19,3 +19,17 @@ jobs:
           {
             "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/main/blankdiscordbot-core/src/main/resources/config-schema.json": [ "application.yml" ]
           }
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.server }}
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        local-dir: ./
+        server-dir: /BlankDiscordBot/config/
+
+
