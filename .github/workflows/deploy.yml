@@ -2,9 +2,9 @@ name: Deploy Configuration
 
 on:
   workflow_run:
-    workflows: Validate application.yml
-    branches: main
-    types: completed
+    workflows: ["Validate application.yml"]
+    branches: ["main"]
+    types: ["completed"]
 
 jobs:
   deploy:
