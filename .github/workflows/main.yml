@@ -32,7 +32,7 @@ jobs:
         FTP_SERVER: ${{ secrets.SERVER }}
         FTP_USERNAME: ${{ secrets.USERNAME }}
         FTP_PASSWORD: ${{ secrets.PASSWORD }}
-        LOCAL_DIR: ./
+        LOCAL_DIR: ./application.yml
         REMOTE_DIR: /root/BlankDiscordBot/config-test/
         METHOD: sftp
         PORT: 22
