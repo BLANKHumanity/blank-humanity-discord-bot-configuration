@@ -2,7 +2,7 @@ name: Validate application.yml
 
 on:
   push:
-    branches: [ main ]
+    branches: [ ** ]
   pull_request:
     branches: [ main ]
 
@@ -25,23 +25,5 @@ jobs:
           {
             "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/${{ steps.latestDiscordBot.release }}/blankdiscordbot-core/src/main/resources/application.yml": [ "config/application.yml" ]
           }
-
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: ${{ secrets.SERVER }}
-        FTP_USERNAME: ${{ secrets.USERNAME }}
-        FTP_PASSWORD: ${{ secrets.PASSWORD }}
-        LOCAL_DIR: ./config/
-        REMOTE_DIR: /root/BlankDiscordBot/config/
-        METHOD: sftp
-        PORT: 22
-        ARGS: --verbose
 
 
