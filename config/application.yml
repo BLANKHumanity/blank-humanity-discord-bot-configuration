@@ -41,7 +41,7 @@ discord:
         bet: "How much do you want to bet?"
         choice: "Rock, paper or scissors"
     roulette:
-      description: "Play roulette with a faulty socket! Can you plug in and charge up or will you get shocked and blow a fuse?"
+      description: "Play roulette with a faulty socket! Can you charge up or will you get shocked and blow a fuse?"
       options:
         bet: "How much do you want to bet?"
     buy:
