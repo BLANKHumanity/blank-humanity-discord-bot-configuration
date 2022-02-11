@@ -22,7 +22,7 @@ jobs:
       with:
         schemaMapping: |
           {
-            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/${{ steps.latestDiscordBot.release }}/blankdiscordbot-core/src/main/resources/application.yml": [ "config/application.yml" ]
+            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/${{ steps.latestDiscordBot.outputs.release }}/blankdiscordbot-core/src/main/resources/application.yml": [ "config/application.yml" ]
           }
 
 
