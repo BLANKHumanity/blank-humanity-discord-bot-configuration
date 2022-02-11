@@ -12,30 +12,18 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     steps:
+    - id: latestDiscordBot
+      uses: pozetroninc/github-action-get-latest-release@master
+      with:
+        owner: BLANKHumanity
+        repo: blank-humanity-discord-bot
+        excludes: prerelease, draft
     - uses: actions/checkout@v2
     - uses: InoUno/yaml-ls-check@v1.1.0
       with:
         schemaMapping: |
           {
-            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/main/blankdiscordbot-core/src/main/resources/config-schema.json": [ "config/application.yml" ]
+            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/${{ steps.latestDiscordBot.outputs.release }}/blankdiscordbot-core/src/main/resources/config-schema.json": [ "config/application.yml" ]
           }
-
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: ${{ secrets.SERVER }}
-        FTP_USERNAME: ${{ secrets.USERNAME }}
-        FTP_PASSWORD: ${{ secrets.PASSWORD }}
-        LOCAL_DIR: ./config/
-        REMOTE_DIR: /root/BlankDiscordBot/config/
-        METHOD: sftp
-        PORT: 22
-        ARGS: --verbose
 
 
