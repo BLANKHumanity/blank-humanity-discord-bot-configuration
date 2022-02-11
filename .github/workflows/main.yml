@@ -23,6 +23,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
