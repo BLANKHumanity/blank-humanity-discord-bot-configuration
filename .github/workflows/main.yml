@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
       with:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
