@@ -33,5 +33,6 @@ jobs:
         REMOTE_DIR: /root/BlankDiscordBot/config/
         METHOD: sftp
         PORT: 22
+        ARGS: --verbose
 
 
