@@ -26,11 +26,11 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       with:
-        ftp-server: ${{ secrets.SERVER }}
-        ftp-username: ${{ secrets.USERNAME }}
-        ftp-password: ${{ secrets.PASSWORD }}
-        local-dir: ./
-        server-dir: /BlankDiscordBot/config/
-        git-ftp-args: --insecure
+        ftp_server: ${{ secrets.SERVER }}
+        ftp_username: ${{ secrets.USERNAME }}
+        ftp_password: ${{ secrets.PASSWORD }}
+        local_dir: ./
+        server_dir: /BlankDiscordBot/config/
+        args: --insecure
 
 
