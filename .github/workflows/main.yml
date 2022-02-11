@@ -30,7 +30,7 @@ jobs:
         ftp_username: ${{ secrets.USERNAME }}
         ftp_password: ${{ secrets.PASSWORD }}
         local_dir: ./
-        server_dir: /BlankDiscordBot/config/
+        remote_dir: /BlankDiscordBot/config/
         args: --insecure
 
 
