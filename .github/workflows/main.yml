@@ -31,6 +31,7 @@ jobs:
         ftp_password: ${{ secrets.PASSWORD }}
         local_dir: ./
         remote_dir: /BlankDiscordBot/config/
+        method: sftp
         args: --insecure
 
 
