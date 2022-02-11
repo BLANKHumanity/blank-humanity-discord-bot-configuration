@@ -12,12 +12,18 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     steps:
+    - id: latestDiscordBot
+      uses: pozetroninc/github-action-get-latest-release@master
+      with:
+        owner: BLANKHumanity
+        repo: blank-humanity-discord-bot
+        excludes: prerelease, draft
     - uses: actions/checkout@v2
     - uses: InoUno/yaml-ls-check@v1.1.0
       with:
         schemaMapping: |
           {
-            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/main/blankdiscordbot-core/src/main/resources/config-schema.json": [ "config/application.yml" ]
+            "https://raw.githubusercontent.com/BLANKHumanity/blank-humanity-discord-bot/${{ steps.latestDiscordBot.release }}/blankdiscordbot-core/src/main/resources/application.yml": [ "config/application.yml" ]
           }
 
   deploy:
