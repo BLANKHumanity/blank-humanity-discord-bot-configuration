@@ -49,6 +49,11 @@ discord:
       options:
         item: "The name of the Shop item to buy"
         amount: "The amount of items you want to buy (default: 1)"
+    funbuy:
+      description: "Buys an item from the Fun Place Shop"
+      options:
+        item: "The name of the shop item to buy"
+        amount: "The amount of items you want to buy (default: 1)"
     give-coins:
       description: "Create coins from the void and give them to someone"
       options:
@@ -56,9 +61,9 @@ discord:
         amount: "Amount of coins to give. Use negative number to remove coins."
       roleRestricted: true
       allowedRoles:
-        - 881733150923964456
-        - 881731045744082964
-        - 927843505202679878
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     gift:
       description: "Gifts an item from the void to a user"
       options:
@@ -67,7 +72,9 @@ discord:
         amount: "The amount of items to give away (default: 1)"
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     remove-item:
       description: "Removes an item from a user's inventory"
       options:
@@ -76,7 +83,9 @@ discord:
         amount: "The amount of items to remove (default: 1)"
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     give:
       description: "Gives an item from your inventory to another user"
       options:
@@ -93,45 +102,57 @@ discord:
         item: "The item to use"
         amount: "The amount of items to use (default: 1)"
     shop:
-      description: "Displays all buyable items from the Shop"
+      description: "Displays all buyable items from the BLANK_ Humanity Shop"
+      options:
+        page: "Shop-Page"
+    funshop:
+      description: "Displays all buyable Items from the Fun Place Shop"
       options:
         page: "Shop-Page"
     votecampaign:
-      description: "Allows management of voting campaigns"
+      description: "Allows creation and management of polls"
       options:
-        create: "Creates a new Vote Campaign"
-        addchoice: "Adds a voteable choice to a Vote Campaign"      
-        removechoice: "Removes a choice from a Vote Campaign"
-        start: "Starts a Vote Campaign"
-        stop: "Stops a Vote Campaign"
-        list: "Lists all Vote Campaigns"
-        name: "Name for Vote Campaign"
-        description: "Description for the Vote Campaign"
-        campaign: "The campaign"
+        create: "Creates a new poll"
+        addchoice: "Adds a voteable choice to a poll"      
+        removechoice: "Removes a choice from a poll"
+        start: "Starts a poll"
+        stop: "Stops a poll"
+        list: "Lists all existing polls"
+        name: "Name for poll"
+        description: "Description for the poll"
+        campaign: "The poll name"
         choice: "A vote choice"
-        page: "Vote Campaign list page"
+        page: "Poll list page"
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     vote:
-      description: "Make your opinion known via a vote"
+      description: "Vote in a poll"
     revealvote:
-      description: "Reveals a Vote Campaign's Result"
+      description: "Reveals a Poll's Results"
       options:
-        campaign: "The Vote Campaign"
+        campaign: "The name of the poll"
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     clearpendinggames:
       description: "Clears all pending games after a bot restart (debug command)"
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     chatsummary: 
       description: "Lists the number of messages of every user in the past X hours in a specific channel"
       roleRestricted: true
       allowedRoles:
-        - 923652378803187802
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
       options:
         channel: "Which channel should be summarised?"
         hours: "How many hours back should be summarised?"
@@ -147,11 +168,15 @@ messages:
   SHOP_TITLE_MESSAGE: "BLANK_ Humanity Shop"
   SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are our items:**\n\n"
   SHOP_FOOTER: "Page %(shopPage)"
+  FUN_PLACE_SHOP_TITLE_MESSAGE: "The Fun Place Shop"
+  FUN_PLACE_SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are the available Fun Place items:**\n\n"
+  FUN_PLACE_SHOP_FOOTER: "Page %(shopPage)"
   SHOP_ITEM_DESCRIPTION: "**%(itemName) - %(shopItemPrice)**<:HC:928474815986302997>\n---- %(itemDescription)\n---- Item ID: ``%(shopItemBuyName)``\n\n"
   ITEM_USE_ACTION_UNDEFINED: "%(userMention), this item has no usage action defined. This is likely a configuration error. Please contact an administrator!"
   ITEM_NOT_EXISTS: "%(userMention), the item '%(itemName)' does not exist."
   ITEM_USE_NOT_OWNED: "%(userMention), you don't have %(itemAmount) of this item."
   ITEM_USE_ONLY_SINGLE_ITEM: "%(userMention), the item '%(itemName)' can only be used seperately." 
+  ITEM_USE_ONLY_REQUIRED_AMOUNT: "%(userMention), the item '%(itemName)' requires the use of exactly '%(itemAmount)'x items."
   ITEM_GIVE_NOT_ENOUGH_OWNED: "%(userMention), you don't have %(itemAmount) of %(itemName) to give away."
   ITEM_GIVE_SUCCESS: "%(userMention), you gave %(receivingUserMention) %(itemAmount) x %(itemName)."
   BUY_ITEM_NO_SUPPLY: "%(userMention), this item has no supply left."
@@ -165,19 +190,19 @@ messages:
   ROLE_REWARD_CLAIMED: "%(userMention), you successfully claimed the role '%(role)'"
   RICHEST_COMMAND: "BLANK_HUMANITY Richest Players\n%(richestCommandBody)"
   RICHEST_COMMAND_ENTRY: "%(leaderboardPlace) %(user)\n%(balance)"
-  VOTE_CAMPAIGN_CREATED: "Vote Campaign '%(voteCampaignName)' was created"
-  VOTE_CAMPAIGN_EXISTS_ALREADY: "A Vote Campaign already exists with the name '%(voteCampaignName)'"
-  VOTE_CAMPAIGN_CHOICE_ADDED: "The choice '%(voteChoice)' has been added to the campaign '%(voteCampaignName)'"
-  VOTE_CAMPAIGN_NOT_FOUND: "No Vote Campaign exists with the name '%(voteCampaignName)'"
-  VOTE_CAMPAIGN_STARTED: "The Vote Campaign '%(voteCampaignName)' was started"
-  VOTE_CAMPAIGN_STOPPED: "The Vote Campaign '%(voteCampaignName)' was stopped"
+  VOTE_CAMPAIGN_CREATED: "The poll '%(voteCampaignName)' was created"
+  VOTE_CAMPAIGN_EXISTS_ALREADY: "A poll already exists with the name '%(voteCampaignName)'"
+  VOTE_CAMPAIGN_CHOICE_ADDED: "The choice '%(voteChoice)' has been added to the poll '%(voteCampaignName)'"
+  VOTE_CAMPAIGN_NOT_FOUND: "No poll exists with the name '%(voteCampaignName)'"
+  VOTE_CAMPAIGN_STARTED: "The poll '%(voteCampaignName)' was started"
+  VOTE_CAMPAIGN_STOPPED: "The poll '%(voteCampaignName)' was stopped"
   VOTE_CAMPAIGN_CHOICE_REMOVED: "The choice '%(voteChoice)' was removed from '%(voteCampaignName)'"
-  VOTE_CAMPAIGN_CHOICE_NOT_FOUND: "The Vote Campaign '%(voteCampaignName)' has no choice '%(voteChoice)'"
-  VOTE_CAMPAIGN_VOTE_DISPLAY_HEADER: "Results of '%(voteCampaignName)'\n - %(voteCampaignDescription) -\n%(voteCampaignVoteChoiceDisplay)"
-  VOTE_CAMPAIGN_VOTE_CHOICE_DISPLAY: "  '%(voteChoice)': %(voteCount) votes"
-  VOTE_COMMAND_ALREADY_VOTED: "%(userMention), you already voted on this"
+  VOTE_CAMPAIGN_CHOICE_NOT_FOUND: "The poll '%(voteCampaignName)' has no choice '%(voteChoice)'"
+  VOTE_CAMPAIGN_VOTE_DISPLAY_HEADER: "**Results of '%(voteCampaignName)'**\n - %(voteCampaignDescription) -\n%(voteCampaignVoteChoiceDisplay)"
+  VOTE_CAMPAIGN_VOTE_CHOICE_DISPLAY: "'%(voteChoice)': %(voteCount) votes"
+  VOTE_COMMAND_ALREADY_VOTED: "%(userMention), you already voted on this."
   VOTE_COMMAND_VOTED: "%(userMention), you successfully voted for '%(voteChoice)'"
-  VOTE_CAMPAIGN_LIST: "Vote Campaign List\n%(voteCampaignListBody)"
+  VOTE_CAMPAIGN_LIST: "Poll List\n%(voteCampaignListBody)"
   VOTE_CAMPAIGN_LIST_DESCRIPTION: " - %(voteCampaignName)"
   GAME_ON_COOLDOWN: ":no_entry_sign: You need to wait %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to use this command"
   ROCK_PAPER_SCISSORS_TIE: ":dove:\nYou and your opponent both played %(rpsUser)\nYou got your %(betAmount) <:HC:928474815986302997> back."
@@ -216,66 +241,75 @@ items:
   definitions:
     -
       id: 1
-      name: "First Class Ticket"
-      description: "A ticket aboard First Class. This automatically grants access to the Allow List for both Initializers and Bitizens."
-      useName: "firstClassTicket"
-      action: "ROLE_REWARD"
-      actionArguments:
-        roleId: 923197747153223700
-    -
-      id: 2
       name: "High Roller Role"
       description: "Do you want to show off your superiority? Humans are competitive creatures, and with this role, you prove you are among the best. 💸"
       useName: "highRollerRole"
       action: "ROLE_REWARD"
       actionArguments:
-        roleId: 923652378803187802
+        roleId: 923462845688074251
     - 
-      id: 3
+      id: 2
       name: ".1 ETH (1 Available)"
       description: ".1 Ethereum paid directly to your wallet."
     - 
-      id: 4
+      id: 3
       name: ".2 ETH (1 Available)"
       description: ".2 Ethereum paid directly to your wallet." 
     - 
-      id: 5
+      id: 4
       name: "Propaganda Token"
-      description: "Your Faction icon as a sticker. Each propaganda cycle lasts one week and stickers will be reset at 10pm PST on Tuesdays, regardless of when purchases are made. Each sticker requires 4 tokens to unlock." 
+      description: "Each Faction Propaganda sticker requires 4 tokens to unlock and resets on Tuesdays. See <#940002641088512050> for details." #Channel ID links to the-cup-shop
+      useName: "propagandaToken"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmount: 4
+        replyMessage: "A Propaganda Sticker has been activated by %(user)! The Overseer has been notified!"
+        messageSend: "<@&927843505202679878>, a Propaganda Sticker has been activated by %(user)!" #Pings @Bitty
+        messageSendChannel: 941462314119462932
     - 
-      id: 6
+      id: 5
       name: "Faction Emoji Token"
-      description: "There are four purchasable emojis per faction. They unlock in a set order. They will last for the duration of this Cup. Each emoji requires 4 tokens to unlock." 
+      description: "Each emoji requires 4 tokens to unlock. There are four purchasable emojis per faction. See <#940002641088512050> for details." #Channel ID links to the-cup-shop
+      useName: "factionEmojiToken"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmount: 4
+        replyMessage: "A Faction Emoji has been activated by %(user)! The Overseer has been notified!"
+        messageSend: "<@&927843505202679878>, a Faction Emoji has been activated by %(user)!" #Pings @Bitty
+        messageSendChannel: 941462314119462932
 shop:
   itemsPerPage: 8
   shopItems:
     -
-     id: 5
-     itemId: 5
+     id: 4
+     itemId: 4
      buyName: "propagandaToken"
      price: 10000
-     amountAvailable: 10000
+     amountAvailable: -1
     -
-     id: 6
-     itemId: 6
+     id: 5
+     itemId: 5
      buyName: "factionEmojiToken"
      price: 50000
-     amountAvailable: 10000
+     amountAvailable: -1
+    -
+     id: 1
+     itemId: 1
+     buyName: "highRollerRole"
+     price: 100000
+     amountAvailable: -1
     -
      id: 2
      itemId: 2
-     buyName: "highRollerRole"
-     price: 100000
-     amountAvailable: 10000
-    -
-     id: 3
-     itemId: 3
      buyName: "pointOneEth"
      price: 750000
      amountAvailable: 1
     -
-     id: 4
-     itemId: 4
+     id: 3
+     itemId: 3
      buyName: "pointTwoEth"
      price: 999999
      amountAvailable: 1
+funshop:  # Different Shop, uses different IDs
+  itemsPerPage: 8
+  shopItems: []
