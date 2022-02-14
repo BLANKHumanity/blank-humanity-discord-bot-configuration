@@ -54,6 +54,11 @@ discord:
       options:
         item: "The name of the shop item to buy"
         amount: "The amount of items you want to buy (default: 1)"
+      roleRestricted: true
+      allowedRoles:
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     give-coins:
       description: "Create coins from the void and give them to someone"
       options:
@@ -109,6 +114,11 @@ discord:
       description: "Displays all buyable Items from the Fun Place Shop"
       options:
         page: "Shop-Page"
+      roleRestricted: true
+      allowedRoles:
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     votecampaign:
       description: "Allows creation and management of polls"
       options:
