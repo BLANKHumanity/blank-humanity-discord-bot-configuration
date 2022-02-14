@@ -54,6 +54,11 @@ discord:
       options:
         item: "The name of the shop item to buy"
         amount: "The amount of items you want to buy (default: 1)"
+      roleRestricted: true
+      allowedRoles:
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     give-coins:
       description: "Create coins from the void and give them to someone"
       options:
@@ -109,6 +114,11 @@ discord:
       description: "Displays all buyable Items from the Fun Place Shop"
       options:
         page: "Shop-Page"
+      roleRestricted: true
+      allowedRoles:
+        - 881733150923964456 # @Creator
+        - 881731045744082964 # @BLANK's Intern
+        - 927843505202679878 # @Bitty
     votecampaign:
       description: "Allows creation and management of polls"
       options:
@@ -277,39 +287,54 @@ items:
         replyMessage: "A Faction Emoji has been activated by %(user)! The Overseer has been notified!"
         messageSend: "<@&927843505202679878>, a Faction Emoji has been activated by %(user)!" #Pings @Bitty
         messageSendChannel: 941462314119462932
+    -
+      id: 6
+      name: "Valentine (Limited Time Only)"
+      description: "Gift these Valentines to your friends or buy one for yourself! Upon /use, this will give the user a temporary Valentine role, which will grant access to a special Valentine POAP!"
+      useName: "valentine"
+      action: "ROLE_REWARD"
+      actionArguments:
+        roleId: 942274318988103711
 shop:
   itemsPerPage: 8
   shopItems:
     -
      order: 1
+     id: 6
+     itemId: 6
+     buyName: "valentine"
+     price: 10
+     amountAvailable: -1
+    -
+     order: 2
      id: 4
      itemId: 4
      buyName: "propagandaToken"
      price: 10000
      amountAvailable: -1
     -
-     order: 2
+     order: 3
      id: 5
      itemId: 5
      buyName: "factionEmojiToken"
      price: 50000
      amountAvailable: -1
     -
-     order: 3
+     order: 4
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
     -
-     order: 4
+     order: 5
      id: 2
      itemId: 2
      buyName: "pointOneEth"
      price: 750000
      amountAvailable: 1
     -
-     order: 5
+     order: 6
      id: 3
      itemId: 3
      buyName: "pointTwoEth"
