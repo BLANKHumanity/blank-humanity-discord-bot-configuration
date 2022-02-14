@@ -10,17 +10,17 @@ spring:
 discord:
   authToken: ${DISCORD_AUTH_TOKEN}
   guildId: ${DISCORD_GUILD_ID}
-  minimum-daily-reward: 25
-  maximum-daily-reward: 100
-  minimum-work-reward: 25
-  maximum-work-reward: 100
+  minimum-daily-reward: 50
+  maximum-daily-reward: 150
+  minimum-work-reward: 75
+  maximum-work-reward: 300
   reward-multiplier: 1
-  streak-multiplier: 1.1
-  user-list-page-size: 8
+  streak-multiplier: 1.03
+  user-list-page-size: 10
   max-game-bet-amount: 300
   command-definitions:
     balance:
-      description: "🪙 /balance [user] - Displays the user's current HC balance."
+      description: "Displays the user's current HC balance."
       options:
         user: "Displays HC balance of the specified user"
     daily:
@@ -69,6 +69,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
     gift:
       description: "Gifts an item from the void to a user"
       options:
@@ -80,6 +81,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
     remove-item:
       description: "Removes an item from a user's inventory"
       options:
@@ -91,6 +93,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
     give:
       description: "Gives an item from your inventory to another user"
       options:
@@ -138,6 +141,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
     vote:
       description: "Vote in a poll"
     revealvote:
@@ -149,6 +153,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
     clearpendinggames:
       description: "Clears all pending games after a bot restart (debug command)"
       roleRestricted: true
@@ -156,6 +161,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
     chatsummary: 
       description: "Lists the number of messages of every user in the past X hours in a specific channel"
       roleRestricted: true
@@ -163,6 +169,8 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 893392311038390322 # @BLANK
+        - 916104368011509831 # @Moderator
       options:
         channel: "Which channel should be summarised?"
         hours: "How many hours back should be summarised?"
@@ -199,7 +207,7 @@ messages:
   ROLE_REWARD_ALREADY_CLAIMED: "%(userMention), you already have the role '%(role)'"
   ROLE_REWARD_CLAIMED: "%(userMention), you successfully claimed the role '%(role)'"
   RICHEST_COMMAND: "<:HC_Bag:928475202843725905> **BLANK_ Humanity's Richest Players** <:HC_Bag:928475202843725905>\n\n%(richestCommandBody)"
-  RICHEST_COMMAND_ENTRY: "**%(leaderboardPlace) - %(user)**\n<:HC:928474815986302997> %(balance)\n"
+  RICHEST_COMMAND_ENTRY: "**%(leaderboardPlace) - %(user)**\n<:HC:928474815986302997> %(balance)"
   VOTE_CAMPAIGN_CREATED: "The poll '%(voteCampaignName)' was created"
   VOTE_CAMPAIGN_EXISTS_ALREADY: "A poll already exists with the name '%(voteCampaignName)'"
   VOTE_CAMPAIGN_CHOICE_ADDED: "The choice '%(voteChoice)' has been added to the poll '%(voteCampaignName)'"
@@ -343,3 +351,4 @@ shop:
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
   shopItems: []
+
