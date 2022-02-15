@@ -162,6 +162,7 @@ discord:
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
+        - 940515365262331935 # @Team
     chatsummary: 
       description: "Lists the number of messages of every user in the past X hours in a specific channel"
       roleRestricted: true
