@@ -14,7 +14,7 @@ discord:
   maximum-daily-reward: 150
   minimum-work-reward: 75
   maximum-work-reward: 300
-  reward-multiplier: 1
+  reward-multiplier: 2
   streak-multiplier: 1.03
   user-list-page-size: 10
   max-game-bet-amount: 300
