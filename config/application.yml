@@ -14,8 +14,8 @@ discord:
   maximum-daily-reward: 150
   minimum-work-reward: 75
   maximum-work-reward: 300
-  reward-multiplier: 1
-  streak-multiplier: 1.03
+  claim-multiplier: 1 # Applies to /work and /daily rewards.
+  streak-log-base: 4
   user-list-page-size: 10
   max-game-bet-amount: 300
   command-definitions:
@@ -176,6 +176,25 @@ discord:
         channel: "Which channel should be summarised?"
         hours: "How many hours back should be summarised?"
         startmessageid: "ID of last message to count"
+games:
+  dice:
+    displayName: Dice
+    cooldownAmount: 1
+    cooldownTimeUnit: HOURS
+    metadataClass: null
+    winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
+  rps:
+    displayName: Rock Paper Scissors
+    cooldownAmount: 1
+    cooldownTimeUnit: HOURS
+    metadataClass: null
+    winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
+  roulette:
+    displayName: Roulette
+    cooldownAmount: 1
+    cooldownTimeUnit: HOURS
+    metadataClass: com.blank.humanity.discordbot.entities.game.RouletteMetadata
+    winningsMultiplier: 1.2 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
 messages:
   BALANCE_COMMAND_MESSAGE: "%(user) has %(balance) <:HC:928474815986302997>."
   DAILY_COMMAND_MESSAGE: "%(userMention) got %(claimReward) <:HC:928474815986302997> as a daily reward! Congrats! See you tomorrow!"
@@ -243,6 +262,11 @@ messages:
     :game_die: %(user) gets %(diceRollUser) ...
     :game_die: %(user), your opponent throws their dice... and gets %(diceRollOpponent)...
     :game_die: %(user), you win back %(rewardAmount) <:HC:928474815986302997>
+  DICE_GAME_DRAW:  |-
+    :game_die: %(user) bets %(betAmount) <:HC:928474815986302997> and throws their dice...
+    :game_die: %(user) gets %(diceRollUser) ...
+    :game_die: %(user), your opponent throws their dice... and gets %(diceRollOpponent)...
+    :game_die: %(user), it is a draw. You win back your bet of %(rewardAmount) <:HC:928474815986302997>
   DICE_GAME_JACKPOT: |-
     :game_die: %(user) bets %(betAmount) <:HC:928474815986302997> and throws their dice...
     :game_die: %(user) gets %(diceRollUser) ...
