@@ -244,7 +244,7 @@ messages:
   VOTE_CAMPAIGN_LIST_DESCRIPTION: " - %(voteCampaignName)"
   GAME_ON_COOLDOWN: ":no_entry_sign: You need to wait %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to use this command"
   ROCK_PAPER_SCISSORS_TIE: ":dove:\nYou and your opponent both played %(rpsUser)\nYou got your %(betAmount) <:HC:928474815986302997> back."
-  ROCK_PAPER_SCISSORS_WIN: "You played %(rpsUser) against %(rpsBot)\nYou won an additional %(betAmount) <:HC:928474815986302997>."
+  ROCK_PAPER_SCISSORS_WIN: "You played %(rpsUser) against %(rpsBot)\nYou won back %(rewardAmount) <:HC:928474815986302997>."
   ROCK_PAPER_SCISSORS_LOSS: "You played %(rpsUser) against %(rpsBot)\nYou lost your %(betAmount) <:HC:928474815986302997>."
   GAME_BET_NOT_ENOUGH_MONEY: "You wanted to bet %(betAmount) <:HC:928474815986302997>, but you only have %(balance) <:HC:928474815986302997>!"
   ROULETTE_GAME_RUNNING: "You already have a game running. Please use the reactions to interact with it!"
