@@ -180,13 +180,13 @@ games:
   dice:
     displayName: Dice
     cooldownAmount: 1
-    cooldownTimeUnit: HOURS
+    cooldownTimeUnit: MINUTES
     metadataClass: null
     winningsMultiplier: 3 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   rps:
     displayName: Rock Paper Scissors
     cooldownAmount: 1
-    cooldownTimeUnit: HOURS
+    cooldownTimeUnit: MINUTES
     metadataClass: null
     winningsMultiplier: 3 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   roulette:
