@@ -14,7 +14,7 @@ discord:
   maximum-daily-reward: 150
   minimum-work-reward: 75
   maximum-work-reward: 300
-  claim-multiplier: 1 # Applies to /work and /daily rewards.
+  claim-multiplier: 2 # Applies to /work and /daily rewards.
   streak-log-base: 4
   user-list-page-size: 10
   max-game-bet-amount: 300
@@ -329,43 +329,47 @@ items:
       actionArguments:
         requiredAmout: 1
         replyMessage: "You go, Glen Coco!"
+    -
+      id: 7
+      name: "BLANK Industries POAP Token (Limited Time Only)"
+      description: "Provides access to a celebratory BLANK Industries POAP. Limit one POAP per person."
 shop:
   itemsPerPage: 8
   shopItems:
     -
      order: 1
-     id: 4
-     itemId: 4
-     buyName: "propagandaToken"
-     price: 10000
+     id: 7
+     itemId: 7
+     buyName: "BLANKIndustriesPOAP"
+     price: 69
      amountAvailable: -1
     -
      order: 2
-     id: 5
-     itemId: 5
-     buyName: "factionEmojiToken"
-     price: 50000
+     id: 4
+     itemId: 4
+     buyName: "propagandaToken"
+     price: 5000
      amountAvailable: -1
     -
      order: 3
+     id: 5
+     itemId: 5
+     buyName: "factionEmojiToken"
+     price: 25000
+     amountAvailable: -1
+    -
+     order: 4
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
     -
-     order: 4
+     order: 5
      id: 2
      itemId: 2
      buyName: "pointOneEth"
      price: 750000
-     amountAvailable: 1
-    -
-     order: 5
-     id: 3
-     itemId: 3
-     buyName: "pointTwoEth"
-     price: 999999
      amountAvailable: 1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
