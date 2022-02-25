@@ -325,9 +325,10 @@ items:
       name: "Valentine (Limited Time Only)"
       description: "Gift these Valentines to your friends or buy one for yourself! Upon /use, this will give the user a temporary Valentine role, which will grant access to a special Valentine POAP!"
       useName: "valentine"
-      action: "ROLE_REWARD"
+      action: MESSAGE_ACTION
       actionArguments:
-        roleId: 942274318988103711
+        requiredAmout: 1
+        replyMessage: "You go, Glen Coco!"
 shop:
   itemsPerPage: 8
   shopItems:
