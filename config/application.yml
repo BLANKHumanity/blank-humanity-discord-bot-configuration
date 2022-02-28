@@ -14,7 +14,7 @@ discord:
   maximum-daily-reward: 150
   minimum-work-reward: 75
   maximum-work-reward: 300
-  claim-multiplier: 2 # Applies to /work and /daily rewards.
+  claim-multiplier: 1 # Applies to /work and /daily rewards.
   streak-log-base: 4
   user-list-page-size: 10
   max-game-bet-amount: 300
@@ -279,7 +279,7 @@ messages:
     %(chatSummaryBody)
   CHAT_SUMMARY_ENTRY: "%(user): %(messageCount) messages"
   CHAT_SUMMARY_PENDING: "Messages are still counted, please wait!"
-  ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(user)'s inventory"
+  ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(receivingUser)'s inventory"
 items:
   definitions:
     -
@@ -331,8 +331,8 @@ items:
         replyMessage: "You go, Glen Coco!"
     -
       id: 7
-      name: "BLANK Industries POAP Token (Limited Time Only)"
-      description: "Provides access to a celebratory BLANK Industries POAP. Limit one POAP per person."
+      name: "BLANK Industries Badge Token (Limited Time Only)"
+      description: "Provides access to a celebratory BLANK Industries badge, which will be an NFT on Polygon. Limit one badge per person."
 shop:
   itemsPerPage: 8
   shopItems:
@@ -340,7 +340,7 @@ shop:
      order: 1
      id: 7
      itemId: 7
-     buyName: "BLANKIndustriesPOAP"
+     buyName: "BLANKIndustriesBadge"
      price: 69
      amountAvailable: -1
     -
