@@ -59,6 +59,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 929862103551053855 # @Initializer
     give-coins:
       description: "Create coins from the void and give them to someone"
       options:
@@ -122,6 +123,8 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 929862103551053855 # @Initializer
+        - 893392311038390322 # @BLANK
     votecampaign:
       description: "Allows creation and management of polls"
       options:
@@ -333,37 +336,107 @@ items:
       id: 7
       name: "BLANK Industries Badge Token (Limited Time Only)"
       description: "Provides access to a celebratory BLANK Industries badge, which will be an NFT on Polygon. Limit one badge per person."
+    -
+      id: 8
+      name: "BLANK Ads"
+      description: "Planning on giving your Initializer a new home and want to be the first to do so? With BLANK Ads, your sale offer will be pinned to <#930089271325511751> for a week so that everybody can find your ad quickly and easily."
+      useName: "BLANKAds"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "An ad has been placed in BLANK Ads by %(user)! A moderator has been notified to pin your ad."
+        messageSend: "<@&916104368011509831>, a BLANK Ad has been purchased by %(user). Please pin their ad in <#930089271325511751>." #Pings @Moderator to pin in buy-and-sell channel
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 9
+      name: "Learn To Love"
+      description: "Initializer Emote Macro: 'loves this' with a heart emoji. Will unlock this macro for one Initializer."
+      useName: "learnToLove"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has learned to love! <@!545086955428380697> has been notified and will assist you in activating this new-found love as soon as possible." 
+        messageSend: "<@!545086955428380697>, Learn To Love has been activated by %(user)." #Pings @Peter
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 10
+      name: "Learn To Send Love"
+      description: "Initializer Emote Macro: 'sends love' with a heart emoji. Will unlock this macro for one Initializer."
+      useName: "learnToSendLove"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has learned to send love! <@!545086955428380697> has been notified and will assist you in activating this new-found sharing of love as soon as possible." 
+        messageSend: "<@!545086955428380697>, Learn To Send Love has been activated by %(user)." #Pings @Peter
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 11
+      name: "The Boldest Initializer"
+      description: "Want to stick out of the crowd for a day? Five minutes of fame is not enough for you, so you want 24 hours? Become the Boldest Initializer for a day and stick out of the crowd with your name in **fluorescent pink!** (Limit 1 active at a time)"
+      useName: "boldestInitializer"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has activated The Boldest Initializer! A member of the Team will assist you with that shortly."
+        messageSend: "<@&933314900959301692>, %(user) has activated The Boldest Initializer. Please give them the role if no one else has it right now. (Lasts 24 hours)" #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 12
+      name: "The Scroll of (Partial) Truth"
+      description: "Have you tried *every* option to solve a puzzle? Are you at the brink of madness? Acquire this powerful scroll to unlock a server-wide hint for any desired puzzle, except Puzzle 22. (Limit 1 per puzzle)"
+      useName: "partialTruth"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has activated the Scroll of (Partial) Truth! A Team member has been summoned and shall be with you shortly."
+        messageSend: "<@&933314900959301692>, %(user) has activated The Scroll of (Partial) Truth and unlocked a puzzle hint. Please contact them to clarify which puzzle and give a hint if none has been given previously." #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 13
+      name: "The Double-Up"
+      description: "You embody the WAGMI spirit and wish to fill the pockets around you as well as your own! Use this item to double bot game payouts for the whole server for 24 hours."
+      useName: "doubleUp"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has activated The Double-Up! Double bot game payouts for everyone!! The Team has been notified and will activate this as soon as possible."
+        messageSend: "<@&933314900959301692>, %(user) has activated The Double-Up. Please activate double bot game payouts for 24 hours." #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 14
+      name: "Initializer 961"
+      description: "Initializer 961 can be yours!"
 shop:
   itemsPerPage: 8
-  shopItems:
+  shopItems:  # Latest ID used: 8
     -
      order: 1
-     id: 7
-     itemId: 7
-     buyName: "BLANKIndustriesBadge"
-     price: 69
-     amountAvailable: -1
-    -
-     order: 2
      id: 4
      itemId: 4
      buyName: "propagandaToken"
      price: 5000
      amountAvailable: -1
     -
-     order: 3
+     order: 2
      id: 5
      itemId: 5
      buyName: "factionEmojiToken"
      price: 25000
      amountAvailable: -1
     -
-     order: 4
+     order: 3
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
+    -
+     order: 4
+     id: 8
+     itemId: 14
+     buyName: "initializer961"
+     price: 496969
+     amountAvailable: 1
     -
      order: 5
      id: 2
@@ -373,4 +446,46 @@ shop:
      amountAvailable: 1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
-  shopItems: []
+  shopItems:  # Latest ID used: 6
+    -
+     order: 1
+     id: 1
+     itemId: 8
+     buyName: "BLANKAds"
+     price: 8000
+     amountAvailable: -1
+    -
+     order: 2
+     id: 2
+     itemId: 9
+     buyName: "learnToLove"
+     price: 10000
+     amountAvailable: -1
+    -
+     order: 3
+     id: 3
+     itemId: 10
+     buyName: "learnToSendLove"
+     price: 10000
+     amountAvailable: -1
+    -
+     order: 4
+     id: 4
+     itemId: 11
+     buyName: "boldestInitializer"
+     price: 15000
+     amountAvailable: -1
+    -
+     order: 5
+     id: 5
+     itemId: 12
+     buyName: "partialTruth"
+     price: 30000
+     amountAvailable: -1
+    -
+     order: 6
+     id: 6
+     itemId: 13
+     buyName: "doubleUp"
+     price: 40000
+     amountAvailable: -1
