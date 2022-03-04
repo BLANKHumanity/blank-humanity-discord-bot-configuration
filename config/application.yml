@@ -210,7 +210,7 @@ messages:
   SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are our items:**\n"
   SHOP_FOOTER: "Page %(shopPage)"
   FUN_PLACE_SHOP_TITLE_MESSAGE: "The Fun Place Shop"
-  FUN_PLACE_SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are the available Fun Place items:**\n"
+  FUN_PLACE_SHOP_HEADER: "Use /funbuy <Item ID> to buy an item\n\n:money_with_wings: **Here are the available Fun Place items:**\n"
   FUN_PLACE_SHOP_FOOTER: "Page %(shopPage)"
   SHOP_ITEM_DESCRIPTION: "**%(itemName) - %(shopItemPrice)** <:HC:928474815986302997>\n%(itemDescription)\nItem ID: ``%(shopItemBuyName)``\n"
   ITEM_USE_ACTION_UNDEFINED: "%(userMention), this item has no usage action defined. This is likely a configuration error. Please contact an administrator!"
