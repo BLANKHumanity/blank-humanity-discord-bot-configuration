@@ -432,13 +432,6 @@ shop:
      amountAvailable: -1
     -
      order: 4
-     id: 8
-     itemId: 14
-     buyName: "initializer961"
-     price: 496969
-     amountAvailable: 1
-    -
-     order: 5
      id: 2
      itemId: 2
      buyName: "pointOneEth"
