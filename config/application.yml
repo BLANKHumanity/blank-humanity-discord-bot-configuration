@@ -18,8 +18,8 @@ discord:
   maximum-daily-reward: 150
   minimum-work-reward: 75
   maximum-work-reward: 300
-  reward-multiplier: 1
-  streak-multiplier: 1.03
+  claim-multiplier: 1 # Applies to /work and /daily rewards.
+  streak-log-base: 4
   user-list-page-size: 10
   max-game-bet-amount: 300
   command-definitions:
@@ -63,6 +63,7 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 929862103551053855 # @Initializer
     give-coins:
       description: "Create coins from the void and give them to someone"
       options:
@@ -126,6 +127,8 @@ discord:
         - 881733150923964456 # @Creator
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
+        - 929862103551053855 # @Initializer
+        - 893392311038390322 # @BLANK
     votecampaign:
       description: "Allows creation and management of polls"
       options:
@@ -189,6 +192,25 @@ discord:
       description: "Set your airdrop wallet"
       options:
         wallet: "Your ethereum wallet"
+games:
+  dice:
+    displayName: Dice
+    cooldownAmount: 1
+    cooldownTimeUnit: HOURS
+    metadataClass: null
+    winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
+  rps:
+    displayName: Rock Paper Scissors
+    cooldownAmount: 1
+    cooldownTimeUnit: HOURS
+    metadataClass: null
+    winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
+  roulette:
+    displayName: Roulette
+    cooldownAmount: 1
+    cooldownTimeUnit: HOURS
+    metadataClass: com.blank.humanity.discordbot.entities.game.RouletteMetadata
+    winningsMultiplier: 1.2 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
 messages:
   BALANCE_COMMAND_MESSAGE: "%(user) has %(balance) <:HC:928474815986302997>."
   DAILY_COMMAND_MESSAGE: "%(userMention) got %(claimReward) <:HC:928474815986302997> as a daily reward! Congrats! See you tomorrow!"
@@ -201,7 +223,7 @@ messages:
   SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are our items:**\n"
   SHOP_FOOTER: "Page %(shopPage)"
   FUN_PLACE_SHOP_TITLE_MESSAGE: "The Fun Place Shop"
-  FUN_PLACE_SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are the available Fun Place items:**\n"
+  FUN_PLACE_SHOP_HEADER: "Use /funbuy <Item ID> to buy an item\n\n:money_with_wings: **Here are the available Fun Place items:**\n"
   FUN_PLACE_SHOP_FOOTER: "Page %(shopPage)"
   SHOP_ITEM_DESCRIPTION: "**%(itemName) - %(shopItemPrice)** <:HC:928474815986302997>\n%(itemDescription)\nItem ID: ``%(shopItemBuyName)``\n"
   ITEM_USE_ACTION_UNDEFINED: "%(userMention), this item has no usage action defined. This is likely a configuration error. Please contact an administrator!"
@@ -238,7 +260,7 @@ messages:
   VOTE_CAMPAIGN_LIST_DESCRIPTION: " - %(voteCampaignName)"
   GAME_ON_COOLDOWN: ":no_entry_sign: You need to wait %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to use this command"
   ROCK_PAPER_SCISSORS_TIE: ":dove:\nYou and your opponent both played %(rpsUser)\nYou got your %(betAmount) <:HC:928474815986302997> back."
-  ROCK_PAPER_SCISSORS_WIN: "You played %(rpsUser) against %(rpsBot)\nYou won an additional %(betAmount) <:HC:928474815986302997>."
+  ROCK_PAPER_SCISSORS_WIN: "You played %(rpsUser) against %(rpsBot)\nYou won back %(rewardAmount) <:HC:928474815986302997>."
   ROCK_PAPER_SCISSORS_LOSS: "You played %(rpsUser) against %(rpsBot)\nYou lost your %(betAmount) <:HC:928474815986302997>."
   GAME_BET_NOT_ENOUGH_MONEY: "You wanted to bet %(betAmount) <:HC:928474815986302997>, but you only have %(balance) <:HC:928474815986302997>!"
   ROULETTE_GAME_RUNNING: "You already have a game running. Please use the reactions to interact with it!"
@@ -255,7 +277,12 @@ messages:
     :game_die: %(user) bets %(betAmount) <:HC:928474815986302997> and throws their dice...
     :game_die: %(user) gets %(diceRollUser) ...
     :game_die: %(user), your opponent throws their dice... and gets %(diceRollOpponent)...
-    :game_die: %(user), you win %(rewardAmount) <:HC:928474815986302997>
+    :game_die: %(user), you win back %(rewardAmount) <:HC:928474815986302997>
+  DICE_GAME_DRAW:  |-
+    :game_die: %(user) bets %(betAmount) <:HC:928474815986302997> and throws their dice...
+    :game_die: %(user) gets %(diceRollUser) ...
+    :game_die: %(user), your opponent throws their dice... and gets %(diceRollOpponent)...
+    :game_die: %(user), it is a draw. You win back your bet of %(rewardAmount) <:HC:928474815986302997>
   DICE_GAME_JACKPOT: |-
     :game_die: %(user) bets %(betAmount) <:HC:928474815986302997> and throws their dice...
     :game_die: %(user) gets %(diceRollUser) ...
@@ -268,10 +295,10 @@ messages:
     %(chatSummaryBody)
   CHAT_SUMMARY_ENTRY: "%(user): %(messageCount) messages"
   CHAT_SUMMARY_PENDING: "Messages are still counted, please wait!"
-  ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(user)'s inventory"
   WALLET_VERIFY_DISPLAY_LINK: "Please connect your web3 wallet [here](%(walletVerifyLink))"
   SET_AIRDROP_WALLET_WRONG_FORMAT_ERROR: "The specified wallet address has an invalid format. Are you using an ethereum address?"
   SET_AIRDROP_WALLET_SUCCESS: "Your airdrop wallet was sucessfully set to '%(airdropWallet)'!"
+  ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(receivingUser)'s inventory"
 items:
   definitions:
     -
@@ -317,55 +344,157 @@ items:
       name: "Valentine (Limited Time Only)"
       description: "Gift these Valentines to your friends or buy one for yourself! Upon /use, this will give the user a temporary Valentine role, which will grant access to a special Valentine POAP!"
       useName: "valentine"
-      action: "ROLE_REWARD"
+      action: MESSAGE_ACTION
       actionArguments:
-        roleId: 942274318988103711
+        requiredAmout: 1
+        replyMessage: "You go, Glen Coco!"
+    -
+      id: 7
+      name: "BLANK Industries Badge Token (Limited Time Only)"
+      description: "Provides access to a celebratory BLANK Industries badge, which will be an NFT on Polygon. Limit one badge per person."
+    -
+      id: 8
+      name: "BLANK Ads"
+      description: "Planning on giving your Initializer a new home and want to be the first to do so? With BLANK Ads, your sale offer will be pinned to <#930089271325511751> for a week so that everybody can find your ad quickly and easily."
+      useName: "BLANKAds"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "An ad has been placed in BLANK Ads by %(user)! A moderator has been notified to pin your ad."
+        messageSend: "<@&916104368011509831>, a BLANK Ad has been purchased by %(user). Please pin their ad in <#930089271325511751>." #Pings @Moderator to pin in buy-and-sell channel
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 9
+      name: "Learn To Love"
+      description: "Initializer Emote Macro: 'loves this' with a heart emoji. Will unlock this macro for one Initializer."
+      useName: "learnToLove"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has learned to love! <@!545086955428380697> has been notified and will assist you in activating this new-found love as soon as possible." 
+        messageSend: "<@!545086955428380697>, Learn To Love has been activated by %(user)." #Pings @Peter
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 10
+      name: "Learn To Send Love"
+      description: "Initializer Emote Macro: 'sends love' with a heart emoji. Will unlock this macro for one Initializer."
+      useName: "learnToSendLove"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has learned to send love! <@!545086955428380697> has been notified and will assist you in activating this new-found sharing of love as soon as possible." 
+        messageSend: "<@!545086955428380697>, Learn To Send Love has been activated by %(user)." #Pings @Peter
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 11
+      name: "The Boldest Initializer"
+      description: "Want to stick out of the crowd for a day? Five minutes of fame is not enough for you, so you want 24 hours? Become the Boldest Initializer for a day and stick out of the crowd with your name in **fluorescent pink!** (Limit 1 active at a time)"
+      useName: "boldestInitializer"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has activated The Boldest Initializer! A member of the Team will assist you with that shortly."
+        messageSend: "<@&933314900959301692>, %(user) has activated The Boldest Initializer. Please give them the role if no one else has it right now. (Lasts 24 hours)" #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 12
+      name: "The Scroll of (Partial) Truth"
+      description: "Have you tried *every* option to solve a puzzle? Are you at the brink of madness? Acquire this powerful scroll to unlock a server-wide hint for any desired puzzle, except Puzzle 22. (Limit 1 per puzzle)"
+      useName: "partialTruth"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has activated the Scroll of (Partial) Truth! A Team member has been summoned and shall be with you shortly."
+        messageSend: "<@&933314900959301692>, %(user) has activated The Scroll of (Partial) Truth and unlocked a puzzle hint. Please contact them to clarify which puzzle and give a hint if none has been given previously." #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 13
+      name: "The Double-Up"
+      description: "You embody the WAGMI spirit and wish to fill the pockets around you as well as your own! Use this item to double bot game payouts for the whole server for 24 hours."
+      useName: "doubleUp"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has activated The Double-Up! Double bot game payouts for everyone!! The Team has been notified and will activate this as soon as possible."
+        messageSend: "<@&933314900959301692>, %(user) has activated The Double-Up. Please activate double bot game payouts for 24 hours." #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+    -
+      id: 14
+      name: "Initializer 961"
+      description: "Initializer 961 can be yours!"
 shop:
   itemsPerPage: 8
-  shopItems:
+  shopItems:  # Latest ID used: 8
     -
      order: 1
-     id: 6
-     itemId: 6
-     buyName: "valentine"
-     price: 10
-     amountAvailable: -1
-    -
-     order: 2
      id: 4
      itemId: 4
      buyName: "propagandaToken"
-     price: 10000
+     price: 5000
      amountAvailable: -1
     -
-     order: 3
+     order: 2
      id: 5
      itemId: 5
      buyName: "factionEmojiToken"
-     price: 50000
+     price: 25000
      amountAvailable: -1
     -
-     order: 4
+     order: 3
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
     -
-     order: 5
+     order: 4
      id: 2
      itemId: 2
      buyName: "pointOneEth"
      price: 750000
      amountAvailable: 1
-    -
-     order: 6
-     id: 3
-     itemId: 3
-     buyName: "pointTwoEth"
-     price: 999999
-     amountAvailable: 1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
-  shopItems: []
-
+  shopItems:  # Latest ID used: 6
+    -
+     order: 1
+     id: 1
+     itemId: 8
+     buyName: "BLANKAds"
+     price: 8000
+     amountAvailable: -1
+    -
+     order: 2
+     id: 2
+     itemId: 9
+     buyName: "learnToLove"
+     price: 10000
+     amountAvailable: -1
+    -
+     order: 3
+     id: 3
+     itemId: 10
+     buyName: "learnToSendLove"
+     price: 10000
+     amountAvailable: -1
+    -
+     order: 4
+     id: 4
+     itemId: 11
+     buyName: "boldestInitializer"
+     price: 15000
+     amountAvailable: -1
+    -
+     order: 5
+     id: 5
+     itemId: 12
+     buyName: "partialTruth"
+     price: 30000
+     amountAvailable: -1
+    -
+     order: 6
+     id: 6
+     itemId: 13
+     buyName: "doubleUp"
+     price: 40000
+     amountAvailable: -1
