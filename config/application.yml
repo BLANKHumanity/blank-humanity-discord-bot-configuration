@@ -313,10 +313,12 @@ items:
       id: 2
       name: ".1 ETH (1 Available)"
       description: ".1 ETH paid directly to your wallet."
+      useName: "pointOneEth"
     - 
       id: 3
       name: ".2 ETH (1 Available)"
       description: ".2 ETH paid directly to your wallet." 
+      useName: "pointTwoEth"
     - 
       id: 4
       name: "Propaganda Token"
@@ -426,6 +428,7 @@ items:
       id: 14
       name: "Initializer 961"
       description: "Initializer 961 can be yours!"
+      useName: "Initializer961"
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 8
