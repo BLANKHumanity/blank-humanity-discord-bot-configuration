@@ -7,6 +7,10 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: update
+web3:
+  wallet:
+    verify:
+      baseUrl:  "https://testbot.test/verify"
 discord:
   authToken: ${DISCORD_AUTH_TOKEN}
   guildId: ${DISCORD_GUILD_ID}
@@ -179,6 +183,15 @@ discord:
         channel: "Which channel should be summarised?"
         hours: "How many hours back should be summarised?"
         startmessageid: "ID of last message to count"
+    verify:
+      description: "Verify your Wallet"
+      roleRestricted: true
+      allowedRoles:
+        - 123542  # Invalid role, effectively disables command for everyone
+    set-airdrop-wallet:
+      description: "Set your airdrop wallet"
+      options:
+        wallet: "Your Ethereum wallet address"
 games:
   dice:
     displayName: Dice
@@ -282,6 +295,9 @@ messages:
     %(chatSummaryBody)
   CHAT_SUMMARY_ENTRY: "%(user): %(messageCount) messages"
   CHAT_SUMMARY_PENDING: "Messages are still counted, please wait!"
+  WALLET_VERIFY_DISPLAY_LINK: "Please connect your Ethereum wallet [here](%(walletVerifyLink))"
+  SET_AIRDROP_WALLET_WRONG_FORMAT_ERROR: "The specified wallet address has an invalid format. Are you using an Ethereum address? ENS will not work at this time."
+  SET_AIRDROP_WALLET_SUCCESS: "Your airdrop wallet was successfully set to '%(airdropWallet)'!"
   ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(receivingUser)'s inventory"
 items:
   definitions:
@@ -296,11 +312,13 @@ items:
     - 
       id: 2
       name: ".1 ETH (1 Available)"
-      description: ".1 Ethereum paid directly to your wallet."
+      description: ".1 ETH paid directly to your wallet."
+      useName: "pointOneEth"
     - 
       id: 3
       name: ".2 ETH (1 Available)"
-      description: ".2 Ethereum paid directly to your wallet." 
+      description: ".2 ETH paid directly to your wallet." 
+      useName: "pointTwoEth"
     - 
       id: 4
       name: "Propaganda Token"
@@ -336,6 +354,10 @@ items:
       id: 7
       name: "BLANK Industries Badge Token (Limited Time Only)"
       description: "Provides access to a celebratory BLANK Industries badge, which will be an NFT on Polygon. Limit one badge per person."
+      useName: "BLANKIndustries"
+      action: "ROLE_REWARD"
+      actionArguments:
+        roleId: 947370598064095332 # @BLANK Industries role 
     -
       id: 8
       name: "BLANK Ads"
@@ -406,6 +428,7 @@ items:
       id: 14
       name: "Initializer 961"
       description: "Initializer 961 can be yours!"
+      useName: "Initializer961"
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 8
