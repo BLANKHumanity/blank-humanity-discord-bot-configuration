@@ -10,7 +10,15 @@ spring:
 web3:
   wallet:
     verify:
-      baseUrl:  "https://testbot.test/verify"
+      baseUrl: "https://testbot.test/verify"
+  provider:
+    url: https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}
+  etherscan:
+    apiKey: ${ETHERSCAN_APIKEY}
+  salestracker: 
+    salesChannel: 951571441399251004
+    contractWatchList:
+      "0x881d9c2f229323aad28a9c9045111e30e1f1eb25": "Initializer"
 discord:
   authToken: ${DISCORD_AUTH_TOKEN}
   guildId: ${DISCORD_GUILD_ID}
@@ -197,19 +205,16 @@ games:
     displayName: Dice
     cooldownAmount: 1
     cooldownTimeUnit: HOURS
-    metadataClass: null
     winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   rps:
     displayName: Rock Paper Scissors
     cooldownAmount: 1
     cooldownTimeUnit: HOURS
-    metadataClass: null
     winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   roulette:
     displayName: Roulette
     cooldownAmount: 1
     cooldownTimeUnit: HOURS
-    metadataClass: com.blank.humanity.discordbot.entities.game.RouletteMetadata
     winningsMultiplier: 1.2 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
 messages:
   BALANCE_COMMAND_MESSAGE: "%(user) has %(balance) <:HC:928474815986302997>."
