@@ -16,7 +16,7 @@ web3:
   etherscan:
     apiKey: ${ETHERSCAN_APIKEY}
   salestracker: 
-    salesChannel: 934187617895997440
+    salesChannel: 951571441399251004
     contractWatchList:
       0x881d9c2f229323aad28a9c9045111e30e1f1eb25: "Initializer"
 discord:
