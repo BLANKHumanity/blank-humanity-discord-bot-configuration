@@ -494,20 +494,6 @@ shop:
      amountAvailable: -1
     -
      order: 4
-     id: 9
-     itemId: 15
-     buyName: "Initializer708"
-     price: 502469
-     amountAvailable: 1
-    -
-     order: 5
-     id: 10
-     itemId: 16
-     buyName: "Initializer192"
-     price: 502469
-     amountAvailable: 1
-    -
-     order: 6
      id: 2
      itemId: 2
      buyName: "pointOneEth"
