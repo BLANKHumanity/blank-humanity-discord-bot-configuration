@@ -301,7 +301,7 @@ messages:
   CHAT_SUMMARY_ENTRY: "%(user): %(messageCount) messages"
   CHAT_SUMMARY_PENDING: "Messages are still counted, please wait!"
   WALLET_VERIFY_DISPLAY_LINK: "Please connect your Ethereum wallet [here](%(walletVerifyLink))"
-  SET_AIRDROP_WALLET_WRONG_FORMAT_ERROR: "The specified wallet address has an invalid format. Are you using an Ethereum address? ENS will not work at this time."
+  SET_AIRDROP_WALLET_WRONG_FORMAT_ERROR: "The specified wallet address has an invalid format. Are you using an Ethereum address?"
   SET_AIRDROP_WALLET_SUCCESS: "Your airdrop wallet was successfully set to '%(airdropWallet)'!"
   ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(receivingUser)'s inventory"
 items:
