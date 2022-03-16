@@ -213,8 +213,8 @@ games:
     winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   roulette:
     displayName: Roulette
-    cooldownAmount: 1
-    cooldownTimeUnit: HOURS
+    cooldownAmount: 30
+    cooldownTimeUnit: MINUTES
     winningsMultiplier: 1.2 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
 messages:
   BALANCE_COMMAND_MESSAGE: "%(user) has %(balance) <:HC:928474815986302997>."
