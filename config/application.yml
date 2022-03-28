@@ -473,6 +473,17 @@ items:
         replyMessage: "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
         messageSend: "<@&927843505202679878>, a Word Action Point Action has been activated by %(user)!" #Pings @Bitty
         messageSendChannel: 951255252789788762 # Word-Action-Points Channel
+    -
+      id: 18
+      name: "Initializer 769"
+      description: "Initializer 769 can be yours!"
+      useName: "Initializer769"
+      action: MESSAGE_ACTION
+      actionArguments:
+        requiredAmout: 1
+        replyMessage: "%(user) has claimed Initializer 769! The Team has been notified and will reach out as soon as possible."
+        messageSend: "<@&933314900959301692>, %(user) has claimed Initializer 769. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
