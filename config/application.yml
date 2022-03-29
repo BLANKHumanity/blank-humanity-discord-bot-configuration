@@ -616,7 +616,7 @@ items:
         -
           action: MESSAGE_SEND
           actionArguments:
-            channel: 934187617895997440 # Fun-Shop-Purchases Channel
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
             message: "<@&927843505202679878>, %(user) has received %(piggyBankItem) from their Piggy Bank v0.0." #Pings @Bitty
         -
           action: MESSAGE_REPLY
