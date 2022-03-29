@@ -236,6 +236,7 @@ messages:
   ITEM_USE_NOT_OWNED: "%(userMention), you don't have %(itemAmount) of this item."
   ITEM_USE_ONLY_SINGLE_ITEM: "%(userMention), the item '%(itemName)' can only be used seperately." 
   ITEM_USE_ONLY_REQUIRED_AMOUNT: "%(userMention), the item '%(itemName)' requires the use of exactly '%(itemAmount)'x items."
+  ITEM_USE_TOO_MANY_REPLIES: "%(userMention), this item usage generated too many replies. If you used multiple items, try using less (10 usually works)"
   ITEM_GIVE_NOT_ENOUGH_OWNED: "%(userMention), you don't have %(itemAmount) of %(itemName) to give away."
   ITEM_GIVE_SUCCESS: "%(userMention), you gave %(receivingUserMention) %(itemAmount) x %(itemName)."
   BUY_ITEM_NO_SUPPLY: "%(userMention), this item has no supply left."
@@ -311,20 +312,30 @@ items:
       name: "High Roller Role"
       description: "Do you want to show off your superiority? Humans are competitive creatures, and with this role, you prove you are among the best. 💸"
       useName: "highRollerRole"
-      action: "ROLE_REWARD"
-      actionArguments:
-        roleId: 923462845688074251
+      actions:
+        -
+          action: "ROLE_REWARD"
+          actionArguments:
+            roleId: 923462845688074251
     - 
       id: 2
       name: ".1 ETH (1 Available)"
       description: ".1 ETH paid directly to your wallet."
       useName: "pointOneEth"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has claimed .1 ETH! The Team has been notified and will reach out as soon as possible."
-        messageSend: "<@&933314900959301692>, %(user) has claimed .1 ETH. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed .1 ETH. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed .1 ETH! The Team has been notified and will reach out as soon as possible."
     - 
       id: 3
       name: ".2 ETH (1 Available)"
@@ -335,106 +346,177 @@ items:
       name: "Propaganda Token"
       description: "Each Faction Propaganda sticker requires 4 tokens to unlock and resets on Tuesdays. See <#940002641088512050> for details." #Channel ID links to the-cup-shop
       useName: "propagandaToken"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmount: 4
-        replyMessage: "A Propaganda Sticker has been activated by %(user)! The Overseer has been notified!"
-        messageSend: "<@&927843505202679878>, a Propaganda Sticker has been activated by %(user)!" #Pings @Bitty
-        messageSendChannel: 941462314119462932
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 4
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&927843505202679878>, a Propaganda Sticker has been activated by %(user)!" #Pings @Bitty
+            channel: 941462314119462932
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "A Propaganda Sticker has been activated by %(user)! The Overseer has been notified!"
     - 
       id: 5
       name: "Faction Emoji Token"
       description: "Each emoji requires 4 tokens to unlock. There are four purchasable emojis per faction. See <#940002641088512050> for details." #Channel ID links to the-cup-shop
       useName: "factionEmojiToken"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmount: 4
-        replyMessage: "A Faction Emoji has been activated by %(user)! The Overseer has been notified!"
-        messageSend: "<@&927843505202679878>, a Faction Emoji has been activated by %(user)!" #Pings @Bitty
-        messageSendChannel: 941462314119462932
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 4
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&927843505202679878>, a Faction Emoji has been activated by %(user)!" #Pings @Bitty
+            channel: 941462314119462932
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "A Faction Emoji has been activated by %(user)! The Overseer has been notified!"
     -
       id: 6
       name: "Valentine (Limited Time Only)"
       description: "Gift these Valentines to your friends or buy one for yourself! Upon /use, this will give the user a temporary Valentine role, which will grant access to a special Valentine POAP!"
       useName: "valentine"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "You go, Glen Coco!"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "You go, Glen Coco!"
     -
       id: 7
       name: "BLANK Industries Badge Token (Limited Time Only)"
       description: "Provides access to a celebratory BLANK Industries badge, which will be an NFT on Polygon. Limit one badge per person."
       useName: "BLANKIndustries"
-      action: "ROLE_REWARD"
-      actionArguments:
-        roleId: 947370598064095332 # @BLANK Industries role 
+      actions:
+        -
+          action: "ROLE_REWARD"
+          actionArguments:
+            roleId: 947370598064095332 # @BLANK Industries role 
     -
       id: 8
       name: "BLANK Ads"
       description: "Planning on giving your Initializer a new home and want to be the first to do so? With BLANK Ads, your sale offer will be pinned to <#930089271325511751> for a week so that everybody can find your ad quickly and easily."
       useName: "BLANKAds"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "An ad has been placed in BLANK Ads by %(user)! A moderator has been notified to pin your ad."
-        messageSend: "<@&916104368011509831>, a BLANK Ad has been purchased by %(user). Please pin their ad in <#930089271325511751>." #Pings @Moderator to pin in buy-and-sell channel
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&916104368011509831>, a BLANK Ad has been purchased by %(user). Please pin their ad in <#930089271325511751>." #Pings @Moderator to pin in buy-and-sell channel
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "An ad has been placed in BLANK Ads by %(user)! A moderator has been notified to pin your ad."
     -
       id: 9
       name: "Learn To Love"
       description: "Initializer Emote Macro: 'loves this' with a heart emoji. Will unlock this macro for one Initializer."
       useName: "learnToLove"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has learned to love! <@!545086955428380697> has been notified and will assist you in activating this new-found love as soon as possible." 
-        messageSend: "<@!545086955428380697>, Learn To Love has been activated by %(user)." #Pings @Peter
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@!545086955428380697>, Learn To Love has been activated by %(user)." #Pings @Peter
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has learned to love! <@!545086955428380697> has been notified and will assist you in activating this new-found love as soon as possible." 
     -
       id: 10
       name: "Learn To Send Love"
       description: "Initializer Emote Macro: 'sends love' with a heart emoji. Will unlock this macro for one Initializer."
       useName: "learnToSendLove"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has learned to send love! <@!545086955428380697> has been notified and will assist you in activating this new-found sharing of love as soon as possible." 
-        messageSend: "<@!545086955428380697>, Learn To Send Love has been activated by %(user)." #Pings @Peter
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@!545086955428380697>, Learn To Send Love has been activated by %(user)." #Pings @Peter
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has learned to send love! <@!545086955428380697> has been notified and will assist you in activating this new-found sharing of love as soon as possible."      
     -
       id: 11
       name: "The Boldest Initializer"
       description: "Want to stick out of the crowd for a day? Five minutes of fame is not enough for you, so you want 24 hours? Become the Boldest Initializer for a day and stick out of the crowd with your name in **fluorescent pink!** (Limit 1 active at a time)"
       useName: "boldestInitializer"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has activated The Boldest Initializer! A member of the Team will assist you with that shortly."
-        messageSend: "<@&933314900959301692>, %(user) has activated The Boldest Initializer. Please give them the role if no one else has it right now. (Lasts 24 hours)" #Pings @Team
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has activated The Boldest Initializer. Please give them the role if no one else has it right now. (Lasts 24 hours)" #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has activated The Boldest Initializer! A member of the Team will assist you with that shortly."
     -
       id: 12
       name: "The Scroll of (Partial) Truth"
       description: "Have you tried *every* option to solve a puzzle? Are you at the brink of madness? Acquire this powerful scroll to unlock a server-wide hint for any desired puzzle, except Puzzle 22. (Limit 1 per puzzle)"
       useName: "partialTruth"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has activated the Scroll of (Partial) Truth! A Team member has been summoned and shall be with you shortly."
-        messageSend: "<@&933314900959301692>, %(user) has activated The Scroll of (Partial) Truth and unlocked a puzzle hint. Please contact them to clarify which puzzle and give a hint if none has been given previously." #Pings @Team
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has activated The Scroll of (Partial) Truth and unlocked a puzzle hint. Please contact them to clarify which puzzle and give a hint if none has been given previously." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has activated the Scroll of (Partial) Truth! A Team member has been summoned and shall be with you shortly."
     -
       id: 13
       name: "The Double-Up"
       description: "You embody the WAGMI spirit and wish to fill the pockets around you as well as your own! Use this item to double bot game payouts for the whole server for 24 hours."
       useName: "doubleUp"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has activated The Double-Up! Double bot game payouts for everyone!! The Team has been notified and will activate this as soon as possible."
-        messageSend: "<@&933314900959301692>, %(user) has activated The Double-Up. Please activate double bot game payouts for 24 hours." #Pings @Team
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has activated The Double-Up. Please activate double bot game payouts for 24 hours." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has activated The Double-Up! Double bot game payouts for everyone!! The Team has been notified and will activate this as soon as possible."
     -
       id: 14
       name: "Initializer 961"
@@ -445,34 +527,101 @@ items:
       name: "Initializer 708"
       description: "Initializer 708 can be yours!"
       useName: "Initializer708"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has claimed Initializer 708! The Team has been notified and will reach out as soon as possible."
-        messageSend: "<@&933314900959301692>, %(user) has claimed Initializer 708. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed Initializer 708. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed Initializer 708! The Team has been notified and will reach out as soon as possible."
     -
       id: 16
       name: "Initializer 192"
       description: "Initializer 192 can be yours!"
       useName: "Initializer192"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmout: 1
-        replyMessage: "%(user) has claimed Initializer 192! The Team has been notified and will reach out as soon as possible."
-        messageSend: "<@&933314900959301692>, %(user) has claimed Initializer 192. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-        messageSendChannel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed Initializer 192. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed Initializer 192! The Team has been notified and will reach out as soon as possible."      
     - 
       id: 17
       name: "Word Action Point"
       description: "Used in the Team Sport 'What's The Word?'"
       useName: "wordActionPoint"
-      action: MESSAGE_ACTION
-      actionArguments:
-        requiredAmount: 4
-        replyMessage: "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
-        messageSend: "<@&927843505202679878>, a Word Action Point Action has been activated by %(user)!" #Pings @Bitty
-        messageSendChannel: 951255252789788762 # Word-Action-Points Channel
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&927843505202679878>, a Word Action Point Action has been activated by %(user)!" #Pings @Bitty
+            channel: 951255252789788762 # Word-Action-Points Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
+    -
+      id: 18
+      name: "Piggy Bank v0.0"
+      description: "Test Lootbox"
+      useName: "piggyBank"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+            supportMultiUse: true
+        -
+          action: RANDOM_SELECTION
+          actionArguments:
+            name: "piggyBankItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
+            selections:
+              initializer:
+                value: "Initializer #769"
+                probability: 1
+              250k:
+                value: "250k <:HC:928474815986302997>"
+                probability: 1
+              100k:
+                value: "100k <:HC:928474815986302997>"
+                probability: 3
+              25k:
+                value: "25k <:HC:928474815986302997>"
+                probability: 5
+              10k:
+                value: "10k <:HC:928474815986302997>"
+                probability: 30
+              5k:
+                value: "5k <:HC:928474815986302997>"
+                probability: 60
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            channel: 934187617895997440 # Fun-Shop-Purchases Channel
+            message: "<@&927843505202679878>, %(user) has received %(piggyBankItem) from their Piggy Bank v0.0." #Pings @Bitty
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) breaks into their Piggy Bank v0.0 and finds %(piggyBankItem)! Bitty has been notified and will add that to your balance as soon as possible."            
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
