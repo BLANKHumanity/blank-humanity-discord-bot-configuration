@@ -582,7 +582,7 @@ items:
     -
       id: 18
       name: "Piggy Bank v0.0"
-      description: "Test Lootbox"
+      description: "Piggy Bank v0.0"
       useName: "piggyBank"
       actions:
         -
@@ -621,7 +621,7 @@ items:
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) breaks into their Piggy Bank v0.0 and finds %(piggyBankItem)! Bitty has been notified and will add that to your balance as soon as possible."            
+            message: "%(user) breaks into their Piggy Bank v0.0 and finds %(piggyBankItem)! Bitty has been notified and will get that to you as soon as possible."            
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
