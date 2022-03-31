@@ -218,11 +218,11 @@ games:
     winningsMultiplier: 1.2 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
 messages:
   BALANCE_COMMAND_MESSAGE: "%(user) has %(balance) <:HC:928474815986302997>."
-  DAILY_COMMAND_MESSAGE: "%(userMention) got %(claimReward) <:HC:928474815986302997> as a daily reward! Congrats! See you tomorrow!"
-  DAILY_COMMAND_MESSAGE_STREAK: "Current streak: %(claimStreak) days! Nice! %(userMention) got %(claimReward) <:HC:928474815986302997> as a daily reward!"
-  DAILY_COMMAND_ALREADY_CLAIMED_MESSAGE: "%(userMention) you can't claim more than once per day. You need to wait for %(cooldownHours) hours, %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to claim again."
-  WORK_COMMAND_MESSAGE: "%(userMention) worked and got %(claimReward) <:HC:928474815986302997> as reward!"
-  WORK_COMMAND_ALREADY_CLAIMED_MESSAGE: "%(userMention) you can't work more than once per hour. You need to wait for %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to work again."
+  DAILY_COMMAND_MESSAGE: "HI %(userMention)!! YOU GET NOTHING!!!\n\nApril Fools! You got %(claimReward) <:HC:928474815986302997> as a daily reward! Congrats! See you tomorrow!"
+  DAILY_COMMAND_MESSAGE_STREAK: "Current streak: 0 days!\n\nApril Fools! It's %(claimStreak). %(userMention), you got %(claimReward) <:HC:928474815986302997> as a daily reward! Good for you!"
+  DAILY_COMMAND_ALREADY_CLAIMED_MESSAGE: "%(userMention) you can't claim more than once per day, you silly goose! You need to wait for %(cooldownHours) hours, %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to claim again."
+  WORK_COMMAND_MESSAGE: "%(userMention) declares that a job well done is reward enough, and doesn't even *want* their %(claimReward) <:HC:928474815986302997> paycheck!"
+  WORK_COMMAND_ALREADY_CLAIMED_MESSAGE: "%(userMention) you can't work more than once per hour. Relax. Enjoy your coffee break. You need to wait for %(cooldownMinutes) minutes and %(cooldownSeconds) seconds to work again."
   SHOP_COMMAND_WRONG_PAGE: "%(userMention) you tried to access a nonexistent Shop page!"
   SHOP_TITLE_MESSAGE: "BLANK_ Humanity Shop"
   SHOP_HEADER: "Use /buy <Item ID> to buy an item\n\n:money_with_wings: **Here are our items:**\n"
