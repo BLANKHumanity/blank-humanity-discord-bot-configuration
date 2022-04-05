@@ -205,17 +205,17 @@ games:
     displayName: Dice
     cooldownAmount: 1
     cooldownTimeUnit: HOURS
-    winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
+    winningsMultiplier: 3 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   rps:
     displayName: Rock Paper Scissors
     cooldownAmount: 1
     cooldownTimeUnit: HOURS
-    winningsMultiplier: 2 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
+    winningsMultiplier: 3 # 2 is baseline, their bet back plus reward. For a 2x multiplier event, set to 3.
   roulette:
     displayName: Roulette
     cooldownAmount: 1
     cooldownTimeUnit: HOURS
-    winningsMultiplier: 1.2 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
+    winningsMultiplier: 1.3 # 1.2 is baseline, Fair = 0% House Edge. For a bot multiplier event, go with 1.3.
 messages:
   BALANCE_COMMAND_MESSAGE: "%(user) has %(balance) <:HC:959697585961046045>."
   DAILY_COMMAND_MESSAGE: "%(userMention) got %(claimReward) <:HC:959697585961046045> as a daily reward! Congrats! See you tomorrow!"
