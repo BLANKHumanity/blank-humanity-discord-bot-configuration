@@ -205,16 +205,16 @@ discord:
         hours: "How many hours back should be summarised?"
         startmessageid: "ID of last message to count"
     verify:
-      description: "Verify your Wallet"
+      description: "Verify that you own a particular wallet address"
     set-airdrop-wallet:
       description: "Set your airdrop wallet"
       options:
         wallet: "Your Ethereum wallet address"
     emote:
-      description: "Temporary"
+      description: "Makes one of your Initializers emote"
       options:
-        initializer: "Temporary"
-        emote: "Temporary"
+        initializer: "Select the Initializer"
+        emote: "Select the emote you'd like the Initializer to use"
 games:
   dice:
     displayName: Dice
@@ -320,8 +320,8 @@ messages:
   SET_AIRDROP_WALLET_WRONG_FORMAT_ERROR: "The specified wallet address has an invalid format. Are you using an Ethereum address?"
   SET_AIRDROP_WALLET_SUCCESS: "Your airdrop wallet was successfully set to '%(airdropWallet)'!"
   ITEM_REMOVE_SUCCESS: "You have removed %(itemAmount) x %(itemName) from %(receivingUser)'s inventory"
-  INITIALIZER_EMOTE_NFT_NOT_OWNED: "You don't own Initializer #%(nftId)! If you actually do, then verify your Address via /verify."
-  INITIALIZER_EMOTE_NOT_BOUGHT: "You haven't bought the emote %(emoteId) from the FunShop yet! Get going"
+  INITIALIZER_EMOTE_NFT_NOT_OWNED: "It appears that you do not own Initializer #%(nftId). If this is incorrect, then verify your address via /verify."
+  INITIALIZER_EMOTE_NOT_BOUGHT: "You do not own the emote %(emoteId). You may purchase it from the Fun Shop if it is still available."
 items:
   definitions:
     -
