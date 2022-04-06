@@ -13,7 +13,7 @@ spring:
 web3:
   wallet:
     verify:
-      baseUrl: "https://testbot.test/verify"
+      baseUrl: "https://app.blankhumanity.com/Verify"
   provider:
     url: https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}
   etherscan:
@@ -206,9 +206,6 @@ discord:
         startmessageid: "ID of last message to count"
     verify:
       description: "Verify your Wallet"
-      roleRestricted: true
-      allowedRoles:
-        - 123542  # Invalid role, effectively disables command for everyone
     set-airdrop-wallet:
       description: "Set your airdrop wallet"
       options:
