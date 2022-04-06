@@ -7,6 +7,9 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: update
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
 web3:
   wallet:
     verify:
@@ -19,6 +22,16 @@ web3:
     salesChannel: 951571441399251004
     contractWatchList:
       "0x881d9c2f229323aad28a9c9045111e30e1f1eb25": "Initializer"
+  nfts:
+    contracts:
+      - "0x881d9c2f229323aad28a9c9045111e30e1f1eb25" 
+emotes:
+  size: medium
+  initializers:
+    - GM
+    - GN
+    - lovesThis
+    - sendLove
 discord:
   authToken: ${DISCORD_AUTH_TOKEN}
   guildId: ${DISCORD_GUILD_ID}
@@ -200,6 +213,10 @@ discord:
       description: "Set your airdrop wallet"
       options:
         wallet: "Your Ethereum wallet address"
+    emote:
+      description: "Temporary"
+      options:
+        initializer: "Temporary"        
 games:
   dice:
     displayName: Dice
