@@ -614,7 +614,7 @@ items:
             selections:
               initializer:
                 value: "Initializer #769"
-                probability: 1
+                probability: 0
               250k:
                 value: "250k <:HC:959697585961046045>"
                 probability: 1
