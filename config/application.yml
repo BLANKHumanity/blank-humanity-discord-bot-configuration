@@ -499,7 +499,7 @@ items:
     -
       id: 12
       name: "The Scroll of (Partial) Truth"
-      description: "Have you tried *every* option to solve a puzzle? Are you at the brink of madness? Acquire this powerful scroll to unlock a server-wide hint for any desired puzzle, except Puzzle 22. (Limit 1 per puzzle)"
+      description: "Have you tried *every* option to solve a puzzle? Are you at the brink of madness? Acquire this powerful scroll to unlock a server-wide hint for any desired puzzle, except Puzzle 22. (Limit 2 per puzzle)"
       useName: "partialTruth"
       actions:
         -
@@ -612,24 +612,69 @@ items:
           actionArguments:
             name: "piggyBankItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
             selections:
-              initializer:
-                value: "Initializer #769"
-                probability: 0
+              BLINKAngel:
+                value: "a BLINK Angel NFT"
+                probability: 1
+              BLINKBLANK:
+                value: "a BLINK BLANK NFT"
+                probability: 1
+              BLINKCool:
+                value: "a BLINK Cool NFT"
+                probability: 1
+              BLINKCry:
+                value: "a BLINK Cry NFT"
+                probability: 1
+              BLINKGrimace:
+                value: "a BLINK Grimace NFT"
+                probability: 1
+              BLINKHappy:
+                value: "a BLINK Happy NFT"
+                probability: 1
+              BLINKLaugh:
+                value: "a BLINK Laugh NFT"
+                probability: 1
+              BLINKLove:
+                value: "a BLINK Love NFT"
+                probability: 1
+              BLINKMad:
+                value: "a BLINK Mad NFT"
+                probability: 1
+              BLINKParty:
+                value: "a BLINK Party NFT"
+                probability: 1
+              BLINKRich:
+                value: "a BLINK Rich NFT"
+                probability: 1
+              BLINKSad:
+                value: "a BLINK Sad NFT"
+                probability: 1
+              BLINKShock:
+                value: "a BLINK Shock NFT"
+                probability: 1
+              BLINKSilly:
+                value: "a BLINK Silly NFT"
+                probability: 1
+              BLINKStarstruck:
+                value: "a BLINK Starstruck NFT"
+                probability: 1
+              BLINKWink:
+                value: "a BLINK Wink NFT"
+                probability: 1
               250k:
                 value: "250k <:HC:959697585961046045>"
-                probability: 1
+                probability: 16
               100k:
                 value: "100k <:HC:959697585961046045>"
-                probability: 3
+                probability: 48
               25k:
                 value: "25k <:HC:959697585961046045>"
-                probability: 5
+                probability: 80
               10k:
                 value: "10k <:HC:959697585961046045>"
-                probability: 30
+                probability: 480
               5k:
                 value: "5k <:HC:959697585961046045>"
-                probability: 60
+                probability: 960
         -
           action: MESSAGE_SEND
           actionArguments:
