@@ -579,7 +579,7 @@ items:
             message: "%(user) has claimed Initializer 192! The Team has been notified and will reach out as soon as possible."      
     - 
       id: 17
-      name: "Word Action Point"
+      name: "Word Action Point (Expired)"
       description: "Used in the Team Sport 'What's The Word?'"
       useName: "wordActionPoint"
       actions:
@@ -595,7 +595,7 @@ items:
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
+            message: "This game has ended." # "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
     -
       id: 18
       name: "Piggy Bank v0.0"
@@ -684,6 +684,191 @@ items:
           action: MESSAGE_REPLY
           actionArguments:
             message: "%(user) breaks into their Piggy Bank v0.0 and finds %(piggyBankItem)! Bitty has been notified and will get that to you as soon as possible."            
+    -
+      id: 19
+      name: "Golden Egg"
+      description: "Golden Egg"
+      useName: "goldenEgg"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+            supportMultiUse: true
+        -
+          action: RANDOM_SELECTION
+          actionArguments:
+            name: "goldenEggItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
+            selections:
+              initializer:
+                value: "Initializer"
+                probability: 4
+              BLINKAngel:
+                value: "a BLINK Angel NFT"
+                probability: 2
+              BLINKBLANK:
+                value: "a BLINK BLANK NFT"
+                probability: 2
+              BLINKCool:
+                value: "a BLINK Cool NFT"
+                probability: 2
+              BLINKCry:
+                value: "a BLINK Cry NFT"
+                probability: 2
+              BLINKGrimace:
+                value: "a BLINK Grimace NFT"
+                probability: 2
+              BLINKHappy:
+                value: "a BLINK Happy NFT"
+                probability: 2
+              BLINKLaugh:
+                value: "a BLINK Laugh NFT"
+                probability: 2
+              BLINKLove:
+                value: "a BLINK Love NFT"
+                probability: 2
+              BLINKMad:
+                value: "a BLINK Mad NFT"
+                probability: 2
+              BLINKParty:
+                value: "a BLINK Party NFT"
+                probability: 2
+              BLINKRich:
+                value: "a BLINK Rich NFT"
+                probability: 2
+              BLINKSad:
+                value: "a BLINK Sad NFT"
+                probability: 2
+              BLINKShock:
+                value: "a BLINK Shock NFT"
+                probability: 2
+              BLINKSilly:
+                value: "a BLINK Silly NFT"
+                probability: 2
+              BLINKStarstruck:
+                value: "a BLINK Starstruck NFT"
+                probability: 2
+              BLINKWink:
+                value: "a BLINK Wink NFT"
+                probability: 2
+              250k:
+                value: "250k <:HC:959697585961046045>"
+                probability: 16
+              100k:
+                value: "100k <:HC:959697585961046045>"
+                probability: 64
+              50k:
+                value: "50k <:HC:959697585961046045>"
+                probability: 192
+              25k:
+                value: "25k <:HC:959697585961046045>"
+                probability: 480
+              10k:
+                value: "10k <:HC:959697585961046045>"
+                probability: 812
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            channel: 963281007061106758 # Gertie's Egg Prizes channel
+            message: "<@&927843505202679878>, %(user) has received %(goldenEggItem) from their Golden Egg." #Pings @Bitty
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) opens their Golden Egg and finds %(goldenEggItem)! This will be distributed to you as soon as possible."          
+    -
+      id: 20
+      name: "Plastic Egg"
+      description: "Plastic Egg"
+      useName: "plasticEgg"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+            supportMultiUse: true
+        -
+          action: RANDOM_SELECTION
+          actionArguments:
+            name: "plasticEggItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
+            selections:
+              BLINKAngel:
+                value: "a BLINK Angel NFT"
+                probability: 1
+              BLINKBLANK:
+                value: "a BLINK BLANK NFT"
+                probability: 1
+              BLINKCool:
+                value: "a BLINK Cool NFT"
+                probability: 1
+              BLINKCry:
+                value: "a BLINK Cry NFT"
+                probability: 1
+              BLINKGrimace:
+                value: "a BLINK Grimace NFT"
+                probability: 1
+              BLINKHappy:
+                value: "a BLINK Happy NFT"
+                probability: 1
+              BLINKLaugh:
+                value: "a BLINK Laugh NFT"
+                probability: 1
+              BLINKLove:
+                value: "a BLINK Love NFT"
+                probability: 1
+              BLINKMad:
+                value: "a BLINK Mad NFT"
+                probability: 1
+              BLINKParty:
+                value: "a BLINK Party NFT"
+                probability: 1
+              BLINKRich:
+                value: "a BLINK Rich NFT"
+                probability: 1
+              BLINKSad:
+                value: "a BLINK Sad NFT"
+                probability: 1
+              BLINKShock:
+                value: "a BLINK Shock NFT"
+                probability: 1
+              BLINKSilly:
+                value: "a BLINK Silly NFT"
+                probability: 1
+              BLINKStarstruck:
+                value: "a BLINK Starstruck NFT"
+                probability: 1
+              BLINKWink:
+                value: "a BLINK Wink NFT"
+                probability: 1
+              25k:
+                value: "25k <:HC:959697585961046045>"
+                probability: 32
+              20k:
+                value: "20k <:HC:959697585961046045>"
+                probability: 80
+              15k:
+                value: "15k <:HC:959697585961046045>"
+                probability: 192
+              10k:
+                value: "10k <:HC:959697585961046045>"
+                probability: 320
+              5k:
+                value: "5k <:HC:959697585961046045>"
+                probability: 320
+              2k:
+                value: "2k <:HC:959697585961046045>"
+                probability: 320
+              1k:
+                value: "1k <:HC:959697585961046045>"
+                probability: 320
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            channel: 963281007061106758 # Gertie's Egg Prizes channel
+            message: "<@&927843505202679878>, %(user) has received %(plasticEggItem) from their Plastic Egg." #Pings @Bitty
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) opens their Plastic Egg and finds %(plasticEggItem)! This will be distributed to you as soon as possible."                  
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
