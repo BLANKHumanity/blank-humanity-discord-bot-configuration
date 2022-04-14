@@ -869,6 +869,20 @@ items:
           action: MESSAGE_REPLY
           actionArguments:
             message: "%(user) opens their Plastic Egg and finds %(plasticEggItem)! This will be distributed to you as soon as possible."                  
+    -
+      id: 21
+      name: "Rotten Egg"
+      description: "Something is very wrong with this egg."
+      useName: "rottenEgg"
+      actions:
+        -
+          action: "ROLE_REWARD"
+          actionArguments:
+            roleId: 963275868845776986 # Stinky 
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "Rancid ooze explodes from the egg and gets all over you. You won't be able to get rid of this smell for at *least* 24 hours."
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
