@@ -883,9 +883,322 @@ items:
           action: MESSAGE_REPLY
           actionArguments:
             message: "Rancid ooze explodes from the egg and gets all over you. You won't be able to get rid of this smell for at *least* 24 hours."
+    -
+      id: 22
+      name: "BLINK Angel NFT"
+      description: "A BLINK Angel NFT"
+      useName: "BLINKangel"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Angel NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Angel NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 23
+      name: "BLINK Wink NFT"
+      description: "A BLINK Wink NFT"
+      useName: "BLINKwink"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Wink NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Wink NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 24
+      name: "BLINK Cool NFT"
+      description: "A BLINK Cool NFT"
+      useName: "BLINKcool"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Cool NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Cool NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 25
+      name: "BLINK Laugh NFT"
+      description: "A BLINK Laugh NFT"
+      useName: "BLINKlaugh"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Laugh NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Laugh NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 26
+      name: "BLINK Rich NFT"
+      description: "A BLINK Rich NFT"
+      useName: "BLINKrich"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Rich NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Rich NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 27
+      name: "BLINK Grimace NFT"
+      description: "A BLINK Grimace NFT"
+      useName: "BLINKgrimace"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Grimace NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Grimace NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 28
+      name: "BLINK Party NFT"
+      description: "A BLINK Party NFT"
+      useName: "BLINKparty"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Party NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Party NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 29
+      name: "BLINK Starstruck NFT"
+      description: "A BLINK Starstruck NFT"
+      useName: "BLINKstarstruck"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Starstruck NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Starstruck NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 30
+      name: "BLINK Mad NFT"
+      description: "A BLINK Mad NFT"
+      useName: "BLINKmad"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Mad NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Mad NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 31
+      name: "BLINK Silly NFT"
+      description: "A BLINK Silly NFT"
+      useName: "BLINKsilly"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Silly NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Silly NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 32
+      name: "BLINK BLANK NFT"
+      description: "A BLINK BLANK NFT"
+      useName: "BLINKblank"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK BLANK NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK BLANK NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 33
+      name: "BLINK Shock NFT"
+      description: "A BLINK Shock NFT"
+      useName: "BLINKshock"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Shock NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Shock NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 34
+      name: "BLINK Happy NFT"
+      description: "A BLINK Happy NFT"
+      useName: "BLINKhappy"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Happy NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Happy NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 35
+      name: "BLINK Sad NFT"
+      description: "A BLINK Sad NFT"
+      useName: "BLINKsad"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Sad NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Sad NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 36
+      name: "BLINK Love NFT"
+      description: "A BLINK Love NFT"
+      useName: "BLINKlove"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Love NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Love NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 37
+      name: "BLINK Cry NFT"
+      description: "A BLINK Cry NFT"
+      useName: "BLINKcry"
+      actions:
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed a BLINK Cry NFT." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a BLINK Cry NFT! The Team has been notified and will reach out as soon as possible."
+    -
+      id: 38
+      name: "BLINKbox"
+      description: "This BLINKbox contains one randomized BLINK NFT."
+      useName: "BLINKbox"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+            supportMultiUse: true
+        -
+          action: RANDOM_SELECTION
+          actionArguments:
+            name: "BLINKboxItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
+            selections:
+              BLINKAngel:
+                value: "a BLINK Angel NFT"
+                probability: 1
+              BLINKBLANK:
+                value: "a BLINK BLANK NFT"
+                probability: 1
+              BLINKCool:
+                value: "a BLINK Cool NFT"
+                probability: 1
+              BLINKCry:
+                value: "a BLINK Cry NFT"
+                probability: 1
+              BLINKGrimace:
+                value: "a BLINK Grimace NFT"
+                probability: 1
+              BLINKHappy:
+                value: "a BLINK Happy NFT"
+                probability: 1
+              BLINKLaugh:
+                value: "a BLINK Laugh NFT"
+                probability: 1
+              BLINKLove:
+                value: "a BLINK Love NFT"
+                probability: 1
+              BLINKMad:
+                value: "a BLINK Mad NFT"
+                probability: 1
+              BLINKParty:
+                value: "a BLINK Party NFT"
+                probability: 1
+              BLINKRich:
+                value: "a BLINK Rich NFT"
+                probability: 1
+              BLINKSad:
+                value: "a BLINK Sad NFT"
+                probability: 1
+              BLINKShock:
+                value: "a BLINK Shock NFT"
+                probability: 1
+              BLINKSilly:
+                value: "a BLINK Silly NFT"
+                probability: 1
+              BLINKStarstruck:
+                value: "a BLINK Starstruck NFT"
+                probability: 1
+              BLINKWink:
+                value: "a BLINK Wink NFT"
+                probability: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+            message: "<@&933314900959301692>, %(user) has received %(BLINKboxItem) from their BLINKbox." #Pings @Team
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) opens their BLINKbox and finds %(BLINKboxItem)! The team has been notified and will reach out as soon as possible."                                                               
 shop:
   itemsPerPage: 8
-  shopItems:  # Latest ID used: 10
+  shopItems:  # Latest ID used: 11
     -
      order: 1
      id: 4
@@ -909,14 +1222,14 @@ shop:
      amountAvailable: -1
     -
      order: 4
-     id: 2
-     itemId: 2
-     buyName: "pointOneEth"
-     price: 750000
-     amountAvailable: 1
+     id: 11
+     itemId: 22
+     buyName: "BLINKangel"
+     price: 400000
+     amountAvailable: -1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
-  shopItems:  # Latest ID used: 6
+  shopItems:  # Latest ID used: 7
     -
      order: 1
      id: 1
@@ -958,4 +1271,11 @@ funshop:  # Different Shop, uses different IDs
      itemId: 13
      buyName: "doubleUp"
      price: 40000
+     amountAvailable: -1
+    -
+     order: 7
+     id: 7
+     itemId: 38
+     buyName: "BLINKbox"
+     price: 400000
      amountAvailable: -1
