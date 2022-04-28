@@ -1195,7 +1195,64 @@ items:
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) opens their BLINKbox and finds %(BLINKboxItem)! The team has been notified and will reach out as soon as possible."                                                               
+            message: "%(user) opens their BLINKbox and finds %(BLINKboxItem)! The team has been notified and will reach out as soon as possible."  
+    -
+      id: 39
+      name: "Learn Nice"
+      description: "Initializer Emote Macro: 'says nice' with a NICE emoji. Will unlock this macro for one Initializer."
+      useName: "learnNice"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@!545086955428380697>, Learn Nice has been activated by %(user)." #Pings @Peter
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has learned NICE! <@!545086955428380697> has been notified and will assist you in activating this as soon as possible." 
+    -
+      id: 40
+      name: "Learn Good Luck"
+      description: "Initializer Emote Macro: 'wishes you luck' with a GL emoji. Will unlock this macro for one Initializer."
+      useName: "learnGoodLuck"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@!545086955428380697>, Learn Good Luck has been activated by %(user)." #Pings @Peter
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has learned Good Luck! <@!545086955428380697> has been notified and will assist you in activating this as soon as possible."                                                              
+    -
+      id: 41
+      name: "WonderPal 2915"
+      description: "WonderPal 2915"
+      useName: "WonderPal2915"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed WonderPal 2915. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed WonderPal 2915! <@&933314900959301692> has been notified and will reach out as soon as possible."                                                                  
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 11
@@ -1229,7 +1286,7 @@ shop:
      amountAvailable: -1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
-  shopItems:  # Latest ID used: 7
+  shopItems:  # Latest ID used: 9
     -
      order: 1
      id: 1
@@ -1239,16 +1296,16 @@ funshop:  # Different Shop, uses different IDs
      amountAvailable: -1
     -
      order: 2
-     id: 2
-     itemId: 9
-     buyName: "learnToLove"
+     id: 8
+     itemId: 39
+     buyName: "learnNice"
      price: 10000
      amountAvailable: -1
     -
      order: 3
-     id: 3
-     itemId: 10
-     buyName: "learnToSendLove"
+     id: 9
+     itemId: 40
+     buyName: "learnGoodLuck"
      price: 10000
      amountAvailable: -1
     -
