@@ -32,6 +32,9 @@ emotes:
     - GN
     - lovesThis
     - sendLove
+    - NICE
+    - GL
+    - isAWinner
 discord:
   authToken: ${DISCORD_AUTH_TOKEN}
   guildId: ${DISCORD_GUILD_ID}
@@ -1234,6 +1237,25 @@ items:
           action: MESSAGE_REPLY
           actionArguments:
             message: "%(user) has learned Good Luck! <@!545086955428380697> has been notified and will assist you in activating this as soon as possible."                                                                                                                               
+    -
+      id: 41
+      name: "WonderPal 2915"
+      description: "WonderPal 2915"
+      useName: "WonderPal2915"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed WonderPal 2915. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed WonderPal 2915! <@&933314900959301692> has been notified and will reach out as soon as possible."             
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 11
