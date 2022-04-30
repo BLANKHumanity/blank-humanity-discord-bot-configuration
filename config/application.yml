@@ -1236,7 +1236,7 @@ items:
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) has learned Good Luck! <@!545086955428380697> has been notified and will assist you in activating this as soon as possible."                                                                                                                               
+            message: "%(user) has learned Good Luck! <@!545086955428380697> has been notified and will assist you in activating this as soon as possible."                                                              
     -
       id: 41
       name: "WonderPal 2915"
@@ -1255,10 +1255,29 @@ items:
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) has claimed WonderPal 2915! <@&933314900959301692> has been notified and will reach out as soon as possible."             
+            message: "%(user) has claimed WonderPal 2915! <@&933314900959301692> has been notified and will reach out as soon as possible."                                                                  
+    -
+      id: 42
+      name: "Happy Homie 289"
+      description: "Happy Homie 289"
+      useName: "HappyHomie289"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed Happy Homie 289. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed Happy Homie 289! <@&933314900959301692> has been notified and will reach out as soon as possible."                                                    
 shop:
   itemsPerPage: 8
-  shopItems:  # Latest ID used: 11
+  shopItems:  # Latest ID used: 12
     -
      order: 1
      id: 4
@@ -1285,8 +1304,15 @@ shop:
      id: 11
      itemId: 22
      buyName: "BLINKangel"
-     price: 400000
+     price: 200000
      amountAvailable: -1
+    -
+     order: 5
+     id: 12
+     itemId: 42
+     buyName: "HappyHomie289"
+     price: 200000
+     amountAvailable: 1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
   shopItems:  # Latest ID used: 9
@@ -1337,5 +1363,5 @@ funshop:  # Different Shop, uses different IDs
      id: 7
      itemId: 38
      buyName: "BLINKbox"
-     price: 400000
+     price: 200000
      amountAvailable: -1
