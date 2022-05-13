@@ -663,9 +663,6 @@ items:
               BLINKWink:
                 value: "a BLINK Wink NFT"
                 probability: 1
-              Homie5393:
-                value: "Happy Homie 5393 (1 available. If already claimed, a replacement Piggy Bank will be issued.)"
-                probability: 16
               250k:
                 value: "250k <:HC:959697585961046045>"
                 probability: 16
