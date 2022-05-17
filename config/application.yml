@@ -663,6 +663,12 @@ items:
               BLINKWink:
                 value: "a BLINK Wink NFT"
                 probability: 1
+              3N8P1283:
+                value: "3NTITY-8PIRIT G3NERATION NFT 1283 (1 available. If already claimed, a replacement Piggy Bank will be issued.)"
+                probability: 16
+              JPGHUMAN8282:
+                value: "JPG HUMAN NFT 8282 (1 available. If already claimed, a replacement Piggy Bank will be issued.)"
+                probability: 16
               250k:
                 value: "250k <:HC:959697585961046045>"
                 probability: 16
@@ -1294,9 +1300,28 @@ items:
           action: MESSAGE_REPLY
           actionArguments:
             message: "%(user) has claimed 1 Month of Discord Nitro! <@&933314900959301692> has been notified and will reach out as soon as possible."                                                                                                                
+    -
+      id: 44
+      name: "Happy Homie 5769"
+      description: "Happy Homie 5769"
+      useName: "HappyHomie5769"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&933314900959301692>, %(user) has claimed Happy Homie 5769. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed Happy Homie 5769! <@&933314900959301692> has been notified and will reach out as soon as possible."  
 shop:
   itemsPerPage: 8
-  shopItems:  # Latest ID used: 14
+  shopItems:  # Latest ID used: 15
     -
      order: 1
      id: 4
@@ -1327,6 +1352,13 @@ shop:
      amountAvailable: -1
     -
      order: 5
+     id: 15
+     itemId: 44
+     buyName: "HappyHomie5769"
+     price: 200000
+     amountAvailable: 1
+    -
+     order: 6
      id: 14
      itemId: 41
      buyName: "WonderPal2915"
