@@ -1352,13 +1352,6 @@ shop:
      amountAvailable: -1
     -
      order: 5
-     id: 15
-     itemId: 44
-     buyName: "HappyHomie5769"
-     price: 200000
-     amountAvailable: 1
-    -
-     order: 6
      id: 14
      itemId: 41
      buyName: "WonderPal2915"
