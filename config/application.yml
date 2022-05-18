@@ -1321,7 +1321,7 @@ items:
             message: "%(user) has claimed Happy Homie 5769! <@&933314900959301692> has been notified and will reach out as soon as possible."  
 shop:
   itemsPerPage: 8
-  shopItems:  # Latest ID used: 15
+  shopItems:  # Latest ID used: 17
     -
      order: 1
      id: 4
@@ -1338,20 +1338,27 @@ shop:
      amountAvailable: -1
     -
      order: 3
+     id: 16
+     itemId: 43
+     buyName: "1MonthDiscordNitro"
+     price: 69000
+     amountAvailable: 10  
+    -
+     order: 4
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
     -
-     order: 4
-     id: 13
-     itemId: 23
-     buyName: "BLINKwink"
+     order: 5
+     id: 17
+     itemId: 24
+     buyName: "BLINKcool"
      price: 200000
      amountAvailable: -1
     -
-     order: 5
+     order: 6
      id: 14
      itemId: 41
      buyName: "WonderPal2915"
