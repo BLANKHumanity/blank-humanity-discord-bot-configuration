@@ -342,20 +342,6 @@ items:
       name: ".1 ETH (1 Available)"
       description: ".1 ETH paid directly to your wallet."
       useName: "pointOneEth"
-      actions:
-        -
-          action: REQUIRED_AMOUNT
-          actionArguments:
-            amount: 1
-        -
-          action: MESSAGE_SEND
-          actionArguments:
-            message: "<@&933314900959301692>, %(user) has claimed .1 ETH. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
-        -
-          action: MESSAGE_REPLY
-          actionArguments:
-            message: "%(user) has claimed .1 ETH! The Team has been notified and will reach out as soon as possible."
     - 
       id: 3
       name: ".2 ETH (1 Available)"
@@ -405,10 +391,6 @@ items:
       description: "Gift these Valentines to your friends or buy one for yourself! Upon /use, this will give the user a temporary Valentine role, which will grant access to a special Valentine POAP!"
       useName: "valentine"
       actions:
-        -
-          action: REQUIRED_AMOUNT
-          actionArguments:
-            amount: 1
         -
           action: MESSAGE_REPLY
           actionArguments:
@@ -547,49 +529,21 @@ items:
       name: "Initializer 708"
       description: "Initializer 708 can be yours!"
       useName: "Initializer708"
-      actions:
-        -
-          action: REQUIRED_AMOUNT
-          actionArguments:
-            amount: 1
-        -
-          action: MESSAGE_SEND
-          actionArguments:
-            message: "<@&933314900959301692>, %(user) has claimed Initializer 708. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
-        -
-          action: MESSAGE_REPLY
-          actionArguments:
-            message: "%(user) has claimed Initializer 708! The Team has been notified and will reach out as soon as possible."
     -
       id: 16
       name: "Initializer 192"
       description: "Initializer 192 can be yours!"
-      useName: "Initializer192"
-      actions:
-        -
-          action: REQUIRED_AMOUNT
-          actionArguments:
-            amount: 1
-        -
-          action: MESSAGE_SEND
-          actionArguments:
-            message: "<@&933314900959301692>, %(user) has claimed Initializer 192. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
-        -
-          action: MESSAGE_REPLY
-          actionArguments:
-            message: "%(user) has claimed Initializer 192! The Team has been notified and will reach out as soon as possible."      
+      useName: "Initializer192"     
     - 
       id: 17
-      name: "Word Action Point (Expired)"
+      name: "Word Action Point"
       description: "Used in the Team Sport 'What's The Word?'"
       useName: "wordActionPoint"
       actions:
         -
           action: REQUIRED_AMOUNT
           actionArguments:
-            amount: 1
+            amount: 4
         -
           action: MESSAGE_SEND
           actionArguments:
@@ -598,7 +552,7 @@ items:
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "This game has ended." # "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
+            message: "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket." # "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
     -
       id: 18
       name: "Piggy Bank v0.0"
@@ -663,9 +617,6 @@ items:
               BLINKWink:
                 value: "a BLINK Wink NFT"
                 probability: 1
-              3N8P1283:
-                value: "3NTITY-8PIRIT G3NERATION NFT 1283 (1 available. If already claimed, a replacement Piggy Bank will be issued.)"
-                probability: 16
               JPGHUMAN8282:
                 value: "JPG HUMAN NFT 8282 (1 available. If already claimed, a replacement Piggy Bank will be issued.)"
                 probability: 16
@@ -1267,20 +1218,6 @@ items:
       name: "Happy Homie 289"
       description: "Happy Homie 289"
       useName: "HappyHomie289"
-      actions:
-        -
-          action: REQUIRED_AMOUNT
-          actionArguments:
-            amount: 1
-        -
-          action: MESSAGE_SEND
-          actionArguments:
-            message: "<@&933314900959301692>, %(user) has claimed Happy Homie 289. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
-        -
-          action: MESSAGE_REPLY
-          actionArguments:
-            message: "%(user) has claimed Happy Homie 289! <@&933314900959301692> has been notified and will reach out as soon as possible."   
     -
       id: 43
       name: "1 Month of Discord Nitro (10 Available)"
@@ -1305,60 +1242,32 @@ items:
       name: "Happy Homie 5769"
       description: "Happy Homie 5769"
       useName: "HappyHomie5769"
-      actions:
-        -
-          action: REQUIRED_AMOUNT
-          actionArguments:
-            amount: 1
-        -
-          action: MESSAGE_SEND
-          actionArguments:
-            message: "<@&933314900959301692>, %(user) has claimed Happy Homie 5769. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
-            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
-        -
-          action: MESSAGE_REPLY
-          actionArguments:
-            message: "%(user) has claimed Happy Homie 5769! <@&933314900959301692> has been notified and will reach out as soon as possible."  
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 17
     -
      order: 1
-     id: 4
-     itemId: 4
-     buyName: "propagandaToken"
-     price: 5000
-     amountAvailable: -1
-    -
-     order: 2
-     id: 5
-     itemId: 5
-     buyName: "factionEmojiToken"
-     price: 25000
-     amountAvailable: -1
-    -
-     order: 3
      id: 16
      itemId: 43
      buyName: "1MonthDiscordNitro"
      price: 69000
      amountAvailable: 10  
     -
-     order: 4
+     order: 2
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
     -
-     order: 5
+     order: 3
      id: 17
      itemId: 24
      buyName: "BLINKcool"
      price: 200000
      amountAvailable: -1
     -
-     order: 6
+     order: 4
      id: 14
      itemId: 41
      buyName: "WonderPal2915"
