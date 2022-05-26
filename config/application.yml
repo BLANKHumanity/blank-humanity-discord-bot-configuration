@@ -555,9 +555,9 @@ items:
             message: "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket." # "Word Action Points have been activated by %(user)! Please write your desired action in your existing game ticket."
     -
       id: 18
-      name: "Piggy Bank v0.0"
-      description: "Piggy Bank v0.0"
-      useName: "piggyBank"
+      name: "Claw Machine Token"
+      description: "One token for the Claw Machine. /use to try your luck!"
+      useName: "clawMachineToken"
       actions:
         -
           action: REQUIRED_AMOUNT
@@ -567,7 +567,7 @@ items:
         -
           action: RANDOM_SELECTION
           actionArguments:
-            name: "piggyBankItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
+            name: "clawItem" # Name for %(...) variable. Gets assigned the value of the selection, for example: %(piggyBankItem) => "Initializer #769"
             selections:
               BLINKAngel:
                 value: "a BLINK Angel NFT"
@@ -639,11 +639,11 @@ items:
           action: MESSAGE_SEND
           actionArguments:
             channel: 948099992986456114 # Fun-Shop-Purchases Channel
-            message: "<@&927843505202679878>, %(user) has received %(piggyBankItem) from their Piggy Bank v0.0." #Pings @Bitty
+            message: "<@&927843505202679878>, %(user) has received %(clawItem) from the Claw Machine." #Pings @Bitty
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) breaks into their Piggy Bank v0.0 and finds %(piggyBankItem)! Bitty has been notified and will get that to you as soon as possible."            
+            message: "%(user) puts a token into the Claw Machine and begins maneuvering the joystick. With some luck, they manage to snag %(clawItem)! Bitty has been notified and will get that to you as soon as possible."            
     -
       id: 19
       name: "Golden Egg"
