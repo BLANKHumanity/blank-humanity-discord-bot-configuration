@@ -1263,13 +1263,6 @@ shop:
      buyName: "BLINKlaugh"
      price: 200000
      amountAvailable: -1
-    -
-     order: 4
-     id: 14
-     itemId: 41
-     buyName: "WonderPal2915"
-     price: 1000000
-     amountAvailable: 1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
