@@ -843,7 +843,7 @@ items:
     -
       id: 22
       name: "BLINK Angel NFT"
-      description: "A BLINK Angel NFT"
+      description: "A BLINK Angel NFT (must /use to claim)"
       useName: "BLINKangel"
       actions:
         -
@@ -858,7 +858,7 @@ items:
     -
       id: 23
       name: "BLINK Wink NFT"
-      description: "A BLINK Wink NFT"
+      description: "A BLINK Wink NFT (must /use to claim)"
       useName: "BLINKwink"
       actions:
         -
@@ -873,7 +873,7 @@ items:
     -
       id: 24
       name: "BLINK Cool NFT"
-      description: "A BLINK Cool NFT"
+      description: "A BLINK Cool NFT (must /use to claim)"
       useName: "BLINKcool"
       actions:
         -
@@ -888,7 +888,7 @@ items:
     -
       id: 25
       name: "BLINK Laugh NFT"
-      description: "A BLINK Laugh NFT"
+      description: "A BLINK Laugh NFT (must /use to claim)"
       useName: "BLINKlaugh"
       actions:
         -
@@ -903,7 +903,7 @@ items:
     -
       id: 26
       name: "BLINK Rich NFT"
-      description: "A BLINK Rich NFT"
+      description: "A BLINK Rich NFT (must /use to claim)"
       useName: "BLINKrich"
       actions:
         -
@@ -918,7 +918,7 @@ items:
     -
       id: 27
       name: "BLINK Grimace NFT"
-      description: "A BLINK Grimace NFT"
+      description: "A BLINK Grimace NFT (must /use to claim)"
       useName: "BLINKgrimace"
       actions:
         -
@@ -933,7 +933,7 @@ items:
     -
       id: 28
       name: "BLINK Party NFT"
-      description: "A BLINK Party NFT"
+      description: "A BLINK Party NFT (must /use to claim)"
       useName: "BLINKparty"
       actions:
         -
@@ -948,7 +948,7 @@ items:
     -
       id: 29
       name: "BLINK Starstruck NFT"
-      description: "A BLINK Starstruck NFT"
+      description: "A BLINK Starstruck NFT (must /use to claim)"
       useName: "BLINKstarstruck"
       actions:
         -
@@ -963,7 +963,7 @@ items:
     -
       id: 30
       name: "BLINK Mad NFT"
-      description: "A BLINK Mad NFT"
+      description: "A BLINK Mad NFT (must /use to claim)"
       useName: "BLINKmad"
       actions:
         -
@@ -978,7 +978,7 @@ items:
     -
       id: 31
       name: "BLINK Silly NFT"
-      description: "A BLINK Silly NFT"
+      description: "A BLINK Silly NFT (must /use to claim)"
       useName: "BLINKsilly"
       actions:
         -
@@ -993,7 +993,7 @@ items:
     -
       id: 32
       name: "BLINK BLANK NFT"
-      description: "A BLINK BLANK NFT"
+      description: "A BLINK BLANK NFT (must /use to claim)"
       useName: "BLINKblank"
       actions:
         -
@@ -1008,7 +1008,7 @@ items:
     -
       id: 33
       name: "BLINK Shock NFT"
-      description: "A BLINK Shock NFT"
+      description: "A BLINK Shock NFT (must /use to claim)"
       useName: "BLINKshock"
       actions:
         -
@@ -1023,7 +1023,7 @@ items:
     -
       id: 34
       name: "BLINK Happy NFT"
-      description: "A BLINK Happy NFT"
+      description: "A BLINK Happy NFT (must /use to claim)"
       useName: "BLINKhappy"
       actions:
         -
@@ -1038,7 +1038,7 @@ items:
     -
       id: 35
       name: "BLINK Sad NFT"
-      description: "A BLINK Sad NFT"
+      description: "A BLINK Sad NFT (must /use to claim)"
       useName: "BLINKsad"
       actions:
         -
@@ -1053,7 +1053,7 @@ items:
     -
       id: 36
       name: "BLINK Love NFT"
-      description: "A BLINK Love NFT"
+      description: "A BLINK Love NFT (must /use to claim)"
       useName: "BLINKlove"
       actions:
         -
@@ -1068,7 +1068,7 @@ items:
     -
       id: 37
       name: "BLINK Cry NFT"
-      description: "A BLINK Cry NFT"
+      description: "A BLINK Cry NFT (must /use to claim)"
       useName: "BLINKcry"
       actions:
         -
