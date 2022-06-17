@@ -1244,81 +1244,11 @@ shop:
   shopItems:  # Latest ID used: 17
     -
      order: 1
-     id: 16
-     itemId: 43
-     buyName: "1MonthDiscordNitro"
-     price: 69000
-     amountAvailable: 10  
-    -
-     order: 2
      id: 1
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
      amountAvailable: -1
-    -
-     order: 3
-     id: 18
-     itemId: 25
-     buyName: "BLINKlaugh"
-     price: 200000
-     amountAvailable: -1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
   shopItems:  # Latest ID used: 10
-    -
-     order: 1
-     id: 1
-     itemId: 8
-     buyName: "BLANKAds"
-     price: 5000
-     amountAvailable: -1
-    -
-     order: 2
-     id: 8
-     itemId: 39
-     buyName: "learnNice"
-     price: 10000
-     amountAvailable: -1
-    -
-     order: 3
-     id: 9
-     itemId: 40
-     buyName: "learnGoodLuck"
-     price: 10000
-     amountAvailable: -1
-    -
-     order: 4
-     id: 4
-     itemId: 11
-     buyName: "boldestInitializer"
-     price: 15000
-     amountAvailable: -1
-    -
-     order: 5
-     id: 5
-     itemId: 12
-     buyName: "partialTruth"
-     price: 30000
-     amountAvailable: -1
-    -
-     order: 6
-     id: 6
-     itemId: 13
-     buyName: "doubleUp"
-     price: 40000
-     amountAvailable: -1
-    -
-     order: 7
-     id: 10
-     itemId: 43
-     buyName: "1MonthDiscordNitro"
-     price: 50000
-     amountAvailable: 10   
-    -
-     order: 8
-     id: 7
-     itemId: 38
-     buyName: "BLINKbox"
-     price: 200000
-     amountAvailable: -1
