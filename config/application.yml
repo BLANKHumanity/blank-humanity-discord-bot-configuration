@@ -1258,12 +1258,12 @@ items:
         -
           action: MESSAGE_SEND
           actionArguments:
-            message: "<@&545086955428380697>, %(user) has claimed a Blinkless Museum Piece. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            message: "<@545086955428380697>, %(user) has claimed a Blinkless Museum Piece. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
             channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) has claimed a Blinkless Museum Piece! <@&545086955428380697> has been notified and will reach out as soon as possible."            
+            message: "%(user) has claimed a Blinkless Museum Piece! <@545086955428380697> has been notified and will reach out as soon as possible."            
     -
       id: 46
       name: "Fremyan NFT"
@@ -1277,12 +1277,12 @@ items:
         -
           action: MESSAGE_SEND
           actionArguments:
-            message: "<@$545086955428380697>, %(user) has claimed a Fremyan. Please open up a ticket with them and request their desired Ethereum address." #Pings @Peterish
+            message: "<@545086955428380697>, %(user) has claimed a Fremyan. Please open up a ticket with them and request their desired Ethereum address." #Pings @Peterish
             channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) has claimed a Fremyan! <@$545086955428380697> has been notified and will reach out as soon as possible."             
+            message: "%(user) has claimed a Fremyan! <@545086955428380697> has been notified and will reach out as soon as possible."             
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 17
