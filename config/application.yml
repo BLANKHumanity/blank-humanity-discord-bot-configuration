@@ -1264,7 +1264,7 @@ items:
       description: "Some of the very first Fremyans ever appeared in this discord, and they have evolved, now minting on Polygon. Get your very own Fremyan with HC and you'll also get a free mint of their future ETH collection! "
       useName: "fremyan"
       actions:
-        -!s
+        -
           action: REQUIRED_AMOUNT
           actionArguments:
             amount: 1
