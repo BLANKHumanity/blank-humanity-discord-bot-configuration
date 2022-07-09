@@ -1294,7 +1294,7 @@ shop:
      buyName: "blinklessMuseumNFT"
      price: 100000
      amountAvailable: -1
-     -
+    -
      order: 3
      id: 3
      itemId: 46
