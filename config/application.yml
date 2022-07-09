@@ -1239,6 +1239,44 @@ items:
       name: "Happy Homie 5769"
       description: "Happy Homie 5769"
       useName: "HappyHomie5769"
+    -
+      id: 45
+      name: "Blinkless Museum Piece NFT"
+      description: "(limit 1 per user) The Blinkless NFT project is doing some interesting things in the space, and their Museum NFTs are collaborations with other artists. This is a shareable NFT that within a certain time frame restores itself when you send it to a friend new to the Blinkless ecosystem."
+      useName: "blinklessMuseum"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&545086955428380697>, %(user) has claimed a Blinkless Museum Piece. Please open up a ticket with them and request their desired Ethereum address." #Pings @Team
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a Blinkless Museum Piece! <@&545086955428380697> has been notified and will reach out as soon as possible."            
+-
+      id: 46
+      name: "Fremyan NFT"
+      description: "Some of the very first Fremyans ever appeared in this discord, and they have evolved, now minting on Polygon. Get your very own Fremyan with HC and you'll also get a free mint of their future ETH collection! "
+      useName: "fremyan"
+      actions:
+        -
+          action: REQUIRED_AMOUNT
+          actionArguments:
+            amount: 1
+        -
+          action: MESSAGE_SEND
+          actionArguments:
+            message: "<@&545086955428380697>, %(user) has claimed a Fremyan. Please open up a ticket with them and request their desired Ethereum address." #Pings @Peterish
+            channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
+        -
+          action: MESSAGE_REPLY
+          actionArguments:
+            message: "%(user) has claimed a Blinkless Museum Piece! <@&545086955428380697> has been notified and will reach out as soon as possible."             
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 17
@@ -1248,6 +1286,20 @@ shop:
      itemId: 1
      buyName: "highRollerRole"
      price: 100000
+     amountAvailable: -1
+    -
+     order: 2
+     id: 2
+     itemId: 45
+     buyName: "blinklessMuseumNFT"
+     price: 100000
+     amountAvailable: -1
+     -
+     order: 3
+     id: 3
+     itemId: 46
+     buyName: "fremyan"
+     price: 200000
      amountAvailable: -1
 funshop:  # Different Shop, uses different IDs
   itemsPerPage: 8
