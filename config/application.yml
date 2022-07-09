@@ -1242,7 +1242,7 @@ items:
     -
       id: 45
       name: "Blinkless Museum Piece NFT"
-      description: "The Blinkless NFT project is doing some interesting things in the space, and their Museum NFTs are collaborations with other artists. This is a shareable NFT that within a certain time frame restores itself when you send it to a friend new to the Blinkless ecosystem."
+      description: "(limit 1 per user) The Blinkless NFT project is doing some interesting things in the space, and their Museum NFTs are collaborations with other artists. This is a shareable NFT that within a certain time frame restores itself when you send it to a friend new to the Blinkless ecosystem."
       useName: "blinklessMuseum"
       actions:
         -
