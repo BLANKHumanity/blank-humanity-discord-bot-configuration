@@ -99,6 +99,7 @@ discord:
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
+        - 933314900959301692 # @Team
     gift:
       description: "Gifts an item from the void to a user"
       options:
@@ -111,6 +112,7 @@ discord:
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
+        - 933314900959301692 # @Team
     remove-item:
       description: "Removes an item from a user's inventory"
       options:
@@ -123,6 +125,7 @@ discord:
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
+        - 933314900959301692 # @Team
     give:
       description: "Gives an item from your inventory to another user"
       options:
@@ -173,6 +176,7 @@ discord:
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
+        - 933314900959301692 # @Team
     vote:
       description: "Vote in a poll"
     revealvote:
@@ -185,6 +189,7 @@ discord:
         - 881731045744082964 # @BLANK's Intern
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
+        - 933314900959301692 # @Team
     clearpendinggames:
       description: "Clears all pending games after a bot restart (debug command)"
       roleRestricted: true
@@ -203,6 +208,7 @@ discord:
         - 927843505202679878 # @Bitty
         - 893392311038390322 # @BLANK
         - 916104368011509831 # @Moderator
+        - 933314900959301692 # @Team
       options:
         channel: "Which channel should be summarised?"
         hours: "How many hours back should be summarised?"
@@ -1271,12 +1277,12 @@ items:
         -
           action: MESSAGE_SEND
           actionArguments:
-            message: "<@&545086955428380697>, %(user) has claimed a Fremyan. Please open up a ticket with them and request their desired Ethereum address." #Pings @Peterish
+            message: "<@$545086955428380697>, %(user) has claimed a Fremyan. Please open up a ticket with them and request their desired Ethereum address." #Pings @Peterish
             channel: 948099992986456114 # Fun-Shop-Purchases Channel (note: this item will be in the regular shop)
         -
           action: MESSAGE_REPLY
           actionArguments:
-            message: "%(user) has claimed a Blinkless Museum Piece! <@&545086955428380697> has been notified and will reach out as soon as possible."             
+            message: "%(user) has claimed a Fremyan! <@$545086955428380697> has been notified and will reach out as soon as possible."             
 shop:
   itemsPerPage: 8
   shopItems:  # Latest ID used: 17
